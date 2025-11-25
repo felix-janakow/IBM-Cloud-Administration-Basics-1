@@ -1,6 +1,5 @@
 ---
-layout: home
-title: IBM Cloud Administration Basics 1
+layout: default
 ---
 
 ![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
@@ -12,6 +11,8 @@ Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Po
 1. Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
 2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein.
 3. Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
+
+![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
 
 ## Multi-Faktor-Authentisierung (MFA) aktivieren
 
