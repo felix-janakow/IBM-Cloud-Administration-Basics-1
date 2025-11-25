@@ -1,8 +1,3 @@
----
-layout: default
-title: Workshop Anleitung
----
-
 ![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
 
 ## Login im IBM Cloud Portal
