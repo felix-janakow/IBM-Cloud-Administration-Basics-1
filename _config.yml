@@ -1,6 +1,17 @@
 theme: minima
-show_title: false
-title: IBM Cloud Basics
+title: IBM Cloud Administration Basics
 description: Dieser Workshop beinhält die Konzepte Identity and Access Management (IAM) / Zugriffsberechtigungen (Cloud Owner vs. Admin, feingranulares Rollenkonzep), Staging / Isolation von Projekten & Ressourcen (Ressourcengruppen, Enterprise Account Konzept), Usage (Wer hat welchen Service gebucht, wird er noch genutzt), Notification (professioneller Betrieb) & Ticketing ,Observability (Logging, Monitoring, Auditing)
 email: felix.janakow@ibm.com
 author: Felix Janakow
+
+# Minima Theme Konfiguration
+minima:
+  skin: auto  # Optionen: auto, classic, dark, solarized, solarized-dark
+  social_links:
+    - { platform: github, user_url: "https://github.com/felix-janakow" }
+    - { platform: email, user_url: "mailto:felix.janakow@ibm.com" }
+
+# Weitere wichtige Einstellungen
+show_excerpts: true
+header_pages:
+  - README.md

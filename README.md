@@ -1,7 +1,12 @@
 
-## Login im IBM Cloud Portal
+---
+layout: default
+title: Workshop Anleitung
+---
 
 ![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
+
+## Login im IBM Cloud Portal
 
 Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal.
 
