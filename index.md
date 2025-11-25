@@ -8,7 +8,7 @@ layout: default
 
 ## 1.1 **Login im IBM Cloud Portal**
 
-Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal.
+Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal
 
 1. Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
 2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein
@@ -25,16 +25,16 @@ Nach der Anmeldung im IBM Cloud Account sollte der nächste Schritt die Aktivier
 
 Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen**.
 
-Um MFA zu aktivieren befolgen Sie folgende Schritte: 
+**Um MFA zu aktivieren befolgen Sie folgende Schritte:**
 
 1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Access (IAM)``
 2. In der linken Seitenleiste klicken Sie auf ``Settings``
 3. Unter ``Settings`` wechseln Sie zu ``Authentication``
 
-Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll.  Die empfohlene Einstellung ist:
+**Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll. Die empfohlene Einstellung ist:**
 
 - **MFA for a user with an IBMid**  
-- Zusatzeinstellung: **Either**, MFA für federated udn non-federated User aktivieren
+- **Either**, MFA für federated und non-federated User aktivieren
 
 
 <img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="950">
@@ -55,12 +55,12 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 - Virtual Routing and Forwarding
 - Service Endpoints
 
-zu verwalten, gehen Sie wie folgt vor:
+**zu verwalten, gehen Sie wie folgt vor:**
 
 1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Account``
 2. Klicken Sie in der Seitenleiste auf ``Account Settings``
 
 
-<img src="{{ site.baseurl }}/screenshots/Settings1:2.png" alt="AccSettings" width="950">
+<img src="{{ site.baseurl }}/screenshots/Settings1-2.png" alt="AccSettings" width="950">
 
-<img src="{{ site.baseurl }}/screenshots/Settings2:2.png" alt="AccSettings" width="950">
+<img src="{{ site.baseurl }}/screenshots/Settings2-2.png" alt="AccSettings" width="950">
