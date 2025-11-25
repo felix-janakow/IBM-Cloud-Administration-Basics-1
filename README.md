@@ -1,12 +1,14 @@
-![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
 
-## Login im IBM Cloud Portal
+
+## **Login im IBM Cloud Portal**
 
 Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal.
 
 1. Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
 2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein.
 3. Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
+
+![IBM Cloud Login](/screenshots/IBMCloud_Login.png)
 
 ## Multi-Faktor-Authentisierung (MFA) aktivieren
 
