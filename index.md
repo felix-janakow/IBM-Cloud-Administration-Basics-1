@@ -2,10 +2,11 @@
 layout: default
 ---
 
-# Erste Schritte 
+# 1. Erste Schritte
+
 ---
 
-## Login im IBM Cloud Portal
+## 1.1 **Login im IBM Cloud Portal**
 
 Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal.
 
@@ -16,7 +17,7 @@ Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Po
 <img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="550">
 
 
-## Multi-Faktor-Authentisierung (MFA) aktivieren
+## 1.2 **Multi-Faktor-Authentisierung (MFA) aktivieren**
 
 Nach der Anmeldung im IBM Cloud Account sollte der nächste Schritt die Aktivierung der Multi-Faktor-Authentifizierung (MFA) sein.
 
@@ -26,15 +27,40 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 
 Um MFA zu aktivieren befolgen Sie folgende Schritte: 
 
-1. . Navigieren Sie in der oberen Leiste zu **Manage** und wählen Sie den Unterpunkt **Access (IAM)**
-2. In der linken Seitenleiste klicken Sie auf **Settings**
-3. Unter **Settings** wechseln Sie zu **Authentication** 
+1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Access (IAM)``
+2. In der linken Seitenleiste klicken Sie auf ``Settings``
+3. Unter ``Settings`` wechseln Sie zu ``Authentication``
 
 Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll.  Die empfohlene Einstellung ist:
+
 - **MFA for a user with an IBMid**  
 - Zusatzeinstellung: **Either**, MFA für federated udn non-federated User aktivieren
 
-<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="IBM Cloud Login" width="550">
 
-<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="IBM Cloud Login" width="550">
+<img src="{{ site.baseurl }}/screenshots/MFA1:2.png" alt="MFA" width="950">
 
+<img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="950">
+
+
+
+## 1.3 **Account-Einstellungen / Aktivieren einer Subscription**
+
+Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufinden, sowie um Subscriptions einzulösen und andere Einstellungen wie:
+
+- Financial Services Validated
+- EU Supported
+- HIPAA Supported
+- Enterprise-managed IAM
+- Commercial Proof of Concept (PoC)
+- Virtual Routing and Forwarding
+- Service Endpoints
+
+zu verwalten, gehen Sie wie folgt vor:
+
+1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Account``
+2. Klicken Sie in der Seitenleiste auf ``Account Settings``
+
+
+<img src="{{ site.baseurl }}/screenshots/Settings1:2.png" alt="AccSettings" width="950">
+
+<img src="{{ site.baseurl }}/screenshots/Settings2:2.png" alt="AccSettings" width="950">
