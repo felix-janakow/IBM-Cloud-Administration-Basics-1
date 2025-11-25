@@ -1,3 +1,7 @@
+---
+title: "IBM Cloud – Administration Basics 1"
+layout: default
+---
 
 
 ## Login im IBM Cloud Portal
