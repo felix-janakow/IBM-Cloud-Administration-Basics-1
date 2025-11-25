@@ -12,6 +12,4 @@ minima:
     - { platform: email, user_url: "mailto:felix.janakow@ibm.com" }
 
 # Weitere wichtige Einstellungen
-show_excerpts: true
-header_pages:
-  - README.md
+show_excerpts: false
