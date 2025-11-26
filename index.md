@@ -479,12 +479,12 @@ Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 
 **2.** Durchsuchen Sie das Angebot von über 250 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
 
- <img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="1500">
+<img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="1500">
 
 &nbsp;
 
 
- ## 4.2 Provisionieren von Ressourcen aus dem Katalog
+## 4.2 Provisionieren von Ressourcen aus dem Katalog
 
 Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die folgenden Schritte zur Bereitstellung aus:
 
@@ -515,7 +515,13 @@ Um einen Überblick über provisionierte Ressourcen/Services zu erhalten, navigi
 
 **2.** Wählen Sie den Punkt ``Resource list`` aus
 
-In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressourcen effizient zu organisieren. Sie können die Liste gezielt n**ach Namen oder Ressourcengruppen filtern**, um spezifische Dienste schneller zu finden. Zudem haben Sie die **Möglichkeit, Tags zu bearbeiten oder Ressourcen direkt aus der Liste heraus zu löschen**. Ein Klick auf den Namen einer Ressource öffnet deren individuelles Dashboard. Dort gelangen Sie in das detaillierte Menü, um die Instanz weiter zu **konfigurieren, zu bearbeiten oder sie endgültig zu entfernen**.
+In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressourcen effizient zu organisieren:
+
+- Sie können die Liste gezielt **nach Namen oder Ressourcengruppen filtern**, um spezifische Dienste schneller zu finden. 
+
+- Zudem haben Sie die **Möglichkeit, Tags zu bearbeiten oder Ressourcen direkt aus der Liste heraus zu löschen**. 
+
+- Ein Klick auf den Namen einer Ressource öffnet deren individuelles Dashboard. Dort gelangen Sie in das detaillierte Menü, um die Instanz weiter zu **konfigurieren, zu bearbeiten oder sie endgültig zu entfernen**.
 
 &nbsp;
 
