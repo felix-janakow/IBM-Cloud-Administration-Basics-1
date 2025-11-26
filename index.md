@@ -104,7 +104,7 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/create_rc_grp.png_" alt="Ressoucengruppen_explained" width="1500">
+<img src="{{ site.baseurl }}/screenshots/create_rc_grp_.png" alt="Ressoucengruppen_explained" width="1500">
 
 &nbsp;
 
@@ -137,6 +137,7 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 <img src="{{ site.baseurl }}/screenshots/IAM_overview.png" alt="IAM_overview" width="1500">
 
 &nbsp;
+&nbsp;
 
 **Zugriff auf die IAM-Verwaltung:**
 
@@ -147,4 +148,61 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfügbaren IAM-Optionen und Einstellungen
 
 <img src="{{ site.baseurl }}/screenshots/IAM_overview2.png" alt="IAM_overview" width="1500">
+
+&nbsp;
+
+## **3.2 User einladen / Account Owner ausfinding machen** 
+
+Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, müssen diese explizit eingeladen werden.
+
+Befolgen Sie dazu folgende Schritte:
+
+1. Navigieren Sie in der oberen Leiste zu ```Manage```
+
+2. Klicken Sie auf ```Access (IAM)```
+
+3. Wählen Sie in der linken Leiste  ``Manage identities`` 
+
+4. Wählen Sie den Punkt ``Users`` aus
+
+***Tipp: Sie können den Account Owner in diesem Schritt ausfindig machen, indem Sie in der Liste nach dem User mit dem Tag Owner suchen***
+
+5. Klicken Sie nun auf den blauen Button ``Invite users +``
+
+6. Wählen Sie zwischen ``Access groups`` und ``Access policy``
+
+---
+
+**Access Groups (Zugriffsgruppen):**
+
+Eine Access Group ist ein logischer Container, der verschiedene Identitäten (Benutzer, Service-IDs, Trusted Profiles) bündelt. Sie dient der effizienten Verwaltung: Anstatt Berechtigungen jedem Nutzer einzeln zuzuweisen, fügen Sie den Nutzer einfach einer Gruppe (z. B. Admins oder Dev-Team) hinzu. Er erbt dann automatisch alle Rechte dieser Gruppe.
+
+**Access Policy (Zugriffsrichtlinie):**
+
+Eine Access Policy ist das eigentliche Regelwerk, das definiert, wer (Subjekt) was (Ressource) wie (Rolle) tun darf. Sie besteht im Kern aus:
+
+Der Ziel-Ressource (z. B. "Alle Kubernetes Cluster in Ressourcengruppe X").
+
+Der Rolle (z. B. Viewer oder Administrator).
+
+**Best Practice:** 
+
+In der Praxis erstellen Sie eine Access Policy und weisen diese einer Access Group zu, die Sie dann User zuweisen. 
+
+Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtigungen direkt einzelnen Benutzern zuweisen, müssen Sie bei Änderungen (z. B. Teamwechsel oder Mitarbeiter-Austritt) jeden Benutzer manuell bearbeiten und jede Richtlinie einzeln entfernen. Dies ist extrem zeitaufwendig und fehleranfällig (Sicherheitsrisiko durch vergessene Rechte).
+
+---
+
+8. Wählen Sie Ihre ``Access groups`` oder ``Access policys`` aus
+9. Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/inite_useres1" alt="user_invite1" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/invite_users2" alt="user_invite2" width="1500">
+
+&nbsp;
+
+
 
