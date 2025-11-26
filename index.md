@@ -525,7 +525,7 @@ In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressour
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/catalog4.png" alt="catalog2" width="1500">
+<img src="{{ site.baseurl }}/screenshots/catalog4_.png" alt="catalog2" width="1500">
 
 <img src="{{ site.baseurl }}/screenshots/catalog3.png" alt="catalog2" width="1500">
 
