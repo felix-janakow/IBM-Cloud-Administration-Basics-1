@@ -10,9 +10,9 @@ layout: default
 
 Der erste Schritt zur Arbeit mit der IBM Cloud ist die Anmeldung im IBM Cloud Portal
 
-1. Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
-2. Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein
-3. Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
+**1.** Öffnen Sie die Login-Seite: [IBM Cloud Login](cloud.ibm.com/login)
+**2.** Geben Sie ihre Zugangsdaten (Benutzername und Passwort) ein
+**3.** Bestätigen Sie die Anmeldung, um Zugriff auf das IBM Cloud Dashboard zu erhalten
 
 <img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="550">
 
@@ -27,9 +27,9 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 
 **Um MFA zu aktivieren befolgen Sie folgende Schritte:**
 
-1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Access (IAM)``
-2. In der linken Seitenleiste klicken Sie auf ``Settings``
-3. Unter ``Settings`` wechseln Sie zu ``Authentication``
+**1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Access (IAM)``
+**2.** In der linken Seitenleiste klicken Sie auf ``Settings``
+**3.** Unter ``Settings`` wechseln Sie zu ``Authentication``
 
 **Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll. Die empfohlene Einstellung ist:**
 
@@ -57,9 +57,9 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 **zu verwalten, gehen Sie wie folgt vor:**
 
-1. Navigieren Sie in der oberen Leiste zu ``Manage`` und 
-2. Wählen Sie den Unterpunkt ``Account``
-2. Klicken Sie in der Seitenleiste auf ``Account Settings``
+**1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+**2.** Wählen Sie den Unterpunkt ``Account``
+**3.** Klicken Sie in der Seitenleiste auf ``Account Settings``
 
 &nbsp;
 
@@ -69,7 +69,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 &nbsp;
 
-# 2 Arbeiten mit Ressorucengruppen
+# 2. Arbeiten mit Ressorucengruppen
 ---
 &nbsp;
 
@@ -97,11 +97,11 @@ Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überl
 
 Eine Ressourcengruppe wird wie folgt angelegt: 
 
-1. Navigieren Sie in der oberen Leiste zu ``Manage`` und 
-2. Wählen Sie den Unterpunkt ``Account``
-3. Klicken Sie auf der linken Leiste auf ``Account resources``
-4. Navigieren Sie in den Unterpunkt ``Resource groups``
-5. Auf der rechten Seite können Sie nun auf ``Create +`` klicken
+**1.** Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+**2.** Wählen Sie den Unterpunkt ``Account``
+**3.** Klicken Sie auf der linken Leiste auf ``Account resources``
+**4.** Navigieren Sie in den Unterpunkt ``Resource groups``
+**5.** Auf der rechten Seite können Sie nun auf ``Create +`` klicken
 
 &nbsp;
 
@@ -142,9 +142,9 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 **Zugriff auf die IAM-Verwaltung:**
 
-1. Klicken Sie in der oberen Navigationsleiste auf ``Manage``
+**1.** Klicken Sie in der oberen Navigationsleiste auf ``Manage``
 
-2. Wählen Sie im Dropdown-Menü den Punkt ``Acess (IAM)``
+**2.** Wählen Sie im Dropdown-Menü den Punkt ``Acess (IAM)``
 
 In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfügbaren IAM-Optionen und Einstellungen
 
@@ -201,35 +201,35 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 **Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:**
 
-1. Navigieren Sie in der oberen Leiste der IBM Cloud Konsole zum Menüpunkt ``Manage``
+**1.** Navigieren Sie in der oberen Leiste der IBM Cloud Konsole zum Menüpunkt ``Manage``
 
-2. Wählen Sie im Dropdown-Menü den Eintrag ``Access (IAM)`` aus
+**2.** Wählen Sie im Dropdown-Menü den Eintrag ``Access (IAM)`` aus
 
-3. Orientieren Sie sich in der linken Seitenleiste am Bereich ``Manage Access``
+**3.** Orientieren Sie sich in der linken Seitenleiste am Bereich ``Manage Access``
 
-4. Klicken Sie dort auf den Unterpunkt ``Access groups``
+**4.** Klicken Sie dort auf den Unterpunkt ``Access groups``
 
-5. Starten Sie die Erstellung einer neuen Gruppe durch Klick auf den blauen Button ``Create +``
+**5.** Starten Sie die Erstellung einer neuen Gruppe durch Klick auf den blauen Button ``Create +``
 
-6. Geben Sie der Gruppe einen eindeutigen Namen (z. B. Platform-Admins) und eine kurze Beschreibung. Bestätigen Sie anschließend mit ``Create``
+**6.** Geben Sie der Gruppe einen eindeutigen Namen (z. B. Platform-Admins) und eine kurze Beschreibung. Bestätigen Sie anschließend mit ``Create``
 
-7. Sie befinden sich nun in der Übersicht der neuen Gruppe. Klicken Sie oben in der Reiter-Leiste auf ``Access``
+**7.** Sie befinden sich nun in der Übersicht der neuen Gruppe. Klicken Sie oben in der Reiter-Leiste auf ``Access``
 
-8. Klicken Sie auf den blauen Button ``Assign access +``, um den Prozess der Rechtevergabe zu starten.
+**8.** Klicken Sie auf den blauen Button ``Assign access +``, um den Prozess der Rechtevergabe zu starten.
 
-9. Wählen Sie im ersten Schritt unter "Service" die Option ``All Account Management Services`` aus (dies steuert Zugriff auf Billing, User-Invites etc.)
+**9.** Wählen Sie im ersten Schritt unter "Service" die Option ``All Account Management Services`` aus (dies steuert Zugriff auf Billing, User-Invites etc.)
 
-10. Scrollen Sie zu "Roles and actions" und setzen Sie das Häkchen bei der ``Rolle Administrator``
+**10.** Scrollen Sie zu "Roles and actions" und setzen Sie das Häkchen bei der ``Rolle Administrator``
 
-11. Klicken Sie unten auf den Button ``Add``, um diese Regel vorzumerken
+**11.** Klicken Sie unten auf den Button ``Add``, um diese Regel vorzumerken
 
-12. Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All Identity and Access enabled services aus`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
+**12.** Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All Identity and Access enabled services aus`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
 
-13. Wählen Sie unter "Roles and actions" auch hier erneut die Rolle ``Administrator`` aus
+**13.** Wählen Sie unter "Roles and actions" auch hier erneut die Rolle ``Administrator`` aus
 
-14. Fügen Sie diese zweite Regel ebenfalls mit einem Klick auf ``Add`` hinzu
+**14.** Fügen Sie diese zweite Regel ebenfalls mit einem Klick auf ``Add`` hinzu
 
-15. Auf der rechten Seite sehen Sie nun im Bereich Summary eine Zusammenfassung der vorgemerkten Richtlinien. Überprüfen Sie die Auswahl und schließen Sie den Vorgang mit einem Klick auf ``Assign`` endgültig ab
+**15.** Auf der rechten Seite sehen Sie nun im Bereich Summary eine Zusammenfassung der vorgemerkten Richtlinien. Überprüfen Sie die Auswahl und schließen Sie den Vorgang mit einem Klick auf ``Assign`` endgültig ab
 
 &nbsp;
 
@@ -250,21 +250,21 @@ Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, m
 
 Befolgen Sie dazu folgende Schritte:
 
-1. Navigieren Sie in der oberen Leiste zu ```Manage```
+**1.** Navigieren Sie in der oberen Leiste zu ```Manage```
 
-2. Klicken Sie auf ```Access (IAM)```
+**2.** Klicken Sie auf ```Access (IAM)```
 
-3. Wählen Sie in der linken Leiste  ``Manage identities`` 
+**3.** Wählen Sie in der linken Leiste  ``Manage identities`` 
 
-4. Wählen Sie den Punkt ``Users`` aus
+**4.** Wählen Sie den Punkt ``Users`` aus
 
-5. Klicken Sie nun auf den blauen Button ``Invite users +``
+**5.** Klicken Sie nun auf den blauen Button ``Invite users +``
 
-6. Wählen Sie zwischen ``Access groups`` und ``Access policy``
+**6.** Wählen Sie zwischen ``Access groups`` und ``Access policy``
 
-8. Wählen Sie Ihre Platform Admin ``Access group`` aus
+**8.** Wählen Sie Ihre Platform Admin ``Access group`` aus
 
-9. Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
+**9.** Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
 
 &nbsp;
 
@@ -343,13 +343,13 @@ Sie möchten, dass ein Operator virtuelle Server neu starten und stoppen darf, a
 
 **Um eine benutzerdefinierte Rolle (Custom Role) zu erstellen, navigieren Sie wie folgt:**
 
-1. Gehen Sie in der oberen Leiste auf ``Manage``
+**1.** Gehen Sie in der oberen Leiste auf ``Manage``
 
-2. Wählen Sie den Eintrag ``Access (IAM)``
+**2.** Wählen Sie den Eintrag ``Access (IAM)``
 
-3. Klicken Sie in der linken Seitenleiste auf ``Roles``
+**3.** Klicken Sie in der linken Seitenleiste auf ``Roles``
 
-4. Starten Sie den Prozess mit einem Klick auf ``Create +``
+**4.** Starten Sie den Prozess mit einem Klick auf ``Create +``
 
 Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Sie zunächst einen aussagekräftigen Namen und eine Beschreibung. Wählen Sie danach den Ziel-Service aus und fügen Sie die gewünschten Berechtigungen (Actions) granular hinzu. Sobald Sie alle Aktionen ausgewählt haben, bestätigen Sie die Erstellung abschließend über den Button Create.
 
@@ -369,7 +369,7 @@ Während IAM ausschließlich regelt, **wer (Identität)** auf eine Ressource zug
 
 **Das Konzept basiert auf zwei Hauptkomponenten:**
 
-1. Rules (Regeln)
+**1.** Rules (Regeln)
 
 Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispielsweise: "Der Zugriff auf den Cloud Object Storage Bucket X ist nur erlaubt, wenn die Anfrage aus der Zone 'Firmen-VPN' kommt."
 
@@ -378,7 +378,7 @@ Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispi
 Durch diese zusätzliche Dimension schützt CBR effektiv vor Credential Theft. Selbst wenn ein Angreifer einen gültigen API-Key stiehlt (das "Wer" ist korrekt), wird der Zugriff verweigert, da er nicht aus dem sicheren Firmennetzwerk kommt (das "Wo" ist falsch).
 
 
-2. Network Zones (Netzwerkzonen)
+**2.** Network Zones (Netzwerkzonen)
 
 Hier definieren Sie vertrauenswürdige Ursprungsorte. Eine Zone ist eine "Allowlist" und kann beinhalten:
 
@@ -390,11 +390,11 @@ Service References (um Cloud-Services untereinander zu autorisieren)
 
 **Um Context-Based Restrictions einzurichten, navigieren Sie wie folgt:**
 
-1. Gehen Sie in der oberen Leiste auf ``Manage``
+**1.** Gehen Sie in der oberen Leiste auf ``Manage``
 
-2. Wählen Sie den Eintrag ``Context-based restrictions``
+**2.** Wählen Sie den Eintrag ``Context-based restrictions``
 
-3. Wählen Sie anschließend den gewünschten Bereich: ``Rules`` oder ``Network zones``
+**3.** Wählen Sie anschließend den gewünschten Bereich: ``Rules`` oder ``Network zones``
 
  <img src="{{ site.baseurl }}/screenshots/cbr1.png" alt="platform/cbr1" width="1500">
 
@@ -402,11 +402,15 @@ Service References (um Cloud-Services untereinander zu autorisieren)
 
 **Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?**
 
+&nbsp;
+
  <img src="{{ site.baseurl }}/screenshots/cbr2.png" alt="platform/cbr2" width="1500">
+
+ &nbsp;
 
 Eine sichere Cloud-Architektur nutzt das Prinzip "Defense in Depth" und kombiniert zwei grundlegende Schutzebenen:
 
-1. **Network-Based Protection (Die Infrastruktur-Ebene)**
+**1. Network-Based Protection (Die Infrastruktur-Ebene)**
 
 Hier wird der Datenverkehr auf Basis von **IP-Adressen, Ports und Protokollen** gesteuert. Es geht darum, ob ein Datenpaket physisch ankommen darf.
 
@@ -414,7 +418,7 @@ Hier wird der Datenverkehr auf Basis von **IP-Adressen, Ports und Protokollen** 
 
 ``Access Control Lists (ACLs)``: Ein **Stateless Filter** auf Subnetz-Ebene. Sie fungieren als erste Barriere und steuern, was überhaupt in das Subnetz hinein- oder herausfließen darf.
 
-2. **Identity-Based Protection (Die Logik-Ebene)**
+**2. Identity-Based Protection (Die Logik-Ebene)**
 
 Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es geht darum, ob ein Benutzer oder Dienst eine Aktion (API-Call) ausführen darf, selbst wenn er netzwerktechnisch Zugriff hätte.
 
@@ -430,6 +434,31 @@ Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es g
 
 - **Identity Protection** verhindert, dass authentifizierte Nutzer unerlaubte Aktionen durchführen oder gestohlene Zugangsdaten von unsicheren Orten genutzt werden.
 
+&nbsp;
+
+
+# 4. Katalog Basics
+---
+&nbsp;
+
+## 4.1 Navigieren im Katalog 
+
+Der Katalog ist der zentrale Marktplatz und Einstiegspunkt für alle Dienste und Softwarelösungen in der IBM Cloud. Er dient dazu, Ressourcen zu entdecken, auszuwählen und bereitzustellen (Provisioning).
+
+**Der Inhalt unterteilt sich in vier Hauptbereiche:**
+
+**Services:** Von IBM verwaltete Dienste (Managed Services) wie Datenbanken, Storage oder Compute-Ressourcen
+
+**Software:** Installierbare Komponenten wie Container-Images, Helm-Charts oder Operatoren (z. B. für OpenShift), sowohl von IBM als auch von zertifizierten Drittanbietern
+
+**Deployable Architectures:** Vorgefertigte Infrastruktur-Templates (IaC), um komplexe Umgebungen sicher und compliant aufzusetzen
+
+**Professional Services:** Beratungs- und Implementierungsdienstleistungen. Hier finden Sie Expertenunterstützung von IBM oder Partnern für spezifische Vorhaben wie Migrationen, Architektur-Design oder Modernisierungsprojekte
+
+
+**Zusätzlich:**
+
+**Private Catalog:** Unternehmen können private Kataloge erstellen. Diese dienen dazu, eigene Softwarelösungen oder genehmigte Versionen von Public-Services intern für Teams bereitzustellen und deren Zugriff zentral zu steuern
 
 
 
