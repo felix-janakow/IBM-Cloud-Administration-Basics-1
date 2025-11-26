@@ -244,7 +244,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 &nbsp;
 
 
-## **3.4 User einladen** 
+## **3.4 User einladen (Admins)** 
 
 Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, müssen diese explizit eingeladen werden.
 
@@ -271,6 +271,50 @@ Befolgen Sie dazu folgende Schritte:
 <img src="{{ site.baseurl }}/screenshots/invite_useres1.png" alt="user_invite1" width="1500">
 
 <img src="{{ site.baseurl }}/screenshots/invite_users2.png" alt="user_invite2" width="1500">
+
+&nbsp;
+
+## 3.5 Konzept: Platform Access vs. Service Access
+
+Ein häufiges Missverständnis in IAM ist der Unterschied zwischen der Verwaltung der Ressource selbst und der Nutzung der darin enthaltenen Daten. IBM Cloud trennt diese Berechtigungen strikt.
+
+Am Beispiel von Cloud Object Storage (COS) lässt sich dies am besten erklären:
+
+**1. Platform Access (Verwaltung der "Hülle"):**
+
+Der Platform Access bezieht sich auf Aktionen, die auf der Ebene der IBM Cloud Konsole stattfinden. Es geht darum, den Lebenszyklus des Services zu steuern, nicht dessen Inhalt.
+
+**Fokus:** 
+
+Management der Service-Instanz
+
+**Typische Rollen:** Viewer, Editor, Administrator
+
+**Beispiel COS:**
+
+- Ein Benutzer mit der Rolle Editor kann eine neue COS-Service-Instanz erstellen oder den Namen der Instanz ändern
+
+- Er kann die Instanz einer Ressourcengruppe zuordnen
+
+- **Aber:** Er kann (ohne Service Access) nicht sehen, welche Dateien in den Buckets liegen oder Dateien hochladen
+
+**2. Service Access (Nutzung des "Inhalts")**
+
+Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfinden, meistens über API-Aufrufe oder direkte Datenoperationen. Es geht um den Zugriff auf die eigentlichen Daten.
+
+**Fokus:** Nutzung der API und Datenmanipulation
+
+**Typische Rollen:** Reader, Writer, Manager
+
+**Beispiel COS:**
+
+- Ein Benutzer mit der Rolle Writer kann Dateien (Objekte) in einen Bucket hochladen oder löschen
+
+- Ein Benutzer mit der Rolle Reader kann Dateien herunterladen
+
+- **Aber:** Er kann die COS-Instanz selbst nicht löschen oder andere Benutzer dazu einladen
+
+<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platfromservice" width="1500">
 
 &nbsp;
 
