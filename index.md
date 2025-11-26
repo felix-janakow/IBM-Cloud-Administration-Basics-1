@@ -135,3 +135,16 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 
 <img src="{{ site.baseurl }}/screenshots/IAM_overview.png" alt="IAM_overview" width="1500">
+
+&nbsp;
+
+**Zugriff auf die IAM-Verwaltung:**
+
+1. Klicken Sie in der oberen Navigationsleiste auf ``Manage``
+
+2. Wählen Sie im Dropdown-Menü den Punkt ``Acess (IAM)``
+
+In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfügbaren IAM-Optionen und Einstellungen
+
+<img src="{{ site.baseurl }}/screenshots/IAM_overview2.png" alt="IAM_overview" width="1500">
+
