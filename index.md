@@ -396,13 +396,13 @@ Service References (um Cloud-Services untereinander zu autorisieren)
 
 3. Wählen Sie anschließend den gewünschten Bereich: ``Rules`` oder ``Network zones``
 
- <img src="{{ site.baseurl }}/screenshots/cbr1" alt="platform/cbr1" width="1500">
+ <img src="{{ site.baseurl }}/screenshots/cbr1.png" alt="platform/cbr1" width="1500">
 
  &nbsp;
 
 **Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?**
 
- <img src="{{ site.baseurl }}/screenshots/cbr1" alt="platform/cbr2" width="1500">
+ <img src="{{ site.baseurl }}/screenshots/cbr2.png" alt="platform/cbr2" width="1500">
 
 Eine sichere Cloud-Architektur nutzt das Prinzip "Defense in Depth" und kombiniert zwei grundlegende Schutzebenen:
 
@@ -412,11 +412,11 @@ Hier wird der Datenverkehr auf Basis von **IP-Adressen, Ports und Protokollen** 
 
 ``Security Groups``: Eine **Stateful Firewall**, die direkt an der virtuellen Server-Instanz (VSI) sitzt. Sie regelt exakt, welcher Traffic den Server erreichen oder verlassen darf.
 
-``Access Control Lists (ACLs)``: Ein ``Stateless Filter`` auf Subnetz-Ebene. Sie fungieren als erste Barriere und steuern, was überhaupt in das Subnetz hinein- oder herausfließen darf.
+``Access Control Lists (ACLs)``: Ein **Stateless Filter** auf Subnetz-Ebene. Sie fungieren als erste Barriere und steuern, was überhaupt in das Subnetz hinein- oder herausfließen darf.
 
-2. ``Identity-Based Protection (Die Logik-Ebene)``
+2. **Identity-Based Protection (Die Logik-Ebene)**
 
-Hier wird der Zugriff auf Basis von ``Identitäten und Kontext`` gesteuert. Es geht darum, ob ein Benutzer oder Dienst eine Aktion (API-Call) ausführen darf, selbst wenn er netzwerktechnisch Zugriff hätte.
+Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es geht darum, ob ein Benutzer oder Dienst eine Aktion (API-Call) ausführen darf, selbst wenn er netzwerktechnisch Zugriff hätte.
 
 ``IAM``: Regelt das **"Wer" und "Was"**. Es authentifiziert den User und prüft, ob er die notwendigen Rechte (Rollen) hat.
 
