@@ -57,7 +57,8 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 **zu verwalten, gehen Sie wie folgt vor:**
 
-1. Navigieren Sie in der oberen Leiste zu ``Manage`` und wählen Sie den Unterpunkt ``Account``
+1. Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+2. Wählen Sie den Unterpunkt ``Account``
 2. Klicken Sie in der Seitenleiste auf ``Account Settings``
 
 
@@ -71,6 +72,33 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 ---
 &nbsp;
 
-## 2.1 Ressourcengruppen erklärt 
+## 2.1 **Ressourcengruppen erklärt** 
 
 Ressourcengruppen sind **logische Container**, die zusammengehörige Cloud-Ressourcen (VMs, Datenbanken etc.) organisieren. Sie dienen als zentrale Ankerpunkte, um **IAM-Zugriffsrichtlinien auf die gesamte Gruppe anzuwenden** und so die Berechtigungsverwaltung zu vereinfachen. Zudem ermöglichen sie eine **klare Kostenverfolgung (Billing)** und die **einfache, isolierte Verwaltung** des gesamten Lebenszyklus der enthaltenen Ressourcen.
+
+
+<img src="{{ site.baseurl }}/screenshots/Ressourcengruppen.png" alt="Ressoucengruppen_explained" width="1500">
+
+&nbsp;
+
+Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant. Eine Ressourcengruppe kann Ressourcen enthalten, die über verschiedene geografische Zonen und Regionen verteilt bereitgestellt wurden.
+
+<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="1500">
+
+&nbsp;
+
+## 2.1 **Ressourcengruppen anlegen** 
+
+Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überlegen Sie, ob eine Gliederung nach Umgebungen (Dev/Test), Projekten oder Teams für Ihren Fall am besten geeignet ist. Berücksichtigen Sie dabei, wie Sie Berechtigungen vererben, Kosten zuordnen und Ressourcen im Team verwalten möchten.
+
+Eine Ressourcengruppe wird wie folgt angelegt: 
+
+1. Navigieren Sie in der oberen Leiste zu ``Manage`` und 
+2. Wählen Sie den Unterpunkt ``Account``
+3. Klicken Sie auf der linken Leiste auf ``Account resources``
+4. Navigieren Sie in den Unterpunkt ``Resource groups``
+5. Auf der rechten Seite können Sie nun auf ``Create +`` klicken
+
+<img src="{{ site.baseurl }}/screenshots/create_rc_grp.png" alt="Ressoucengruppen_explained" width="1500">
+
+&nbsp;
