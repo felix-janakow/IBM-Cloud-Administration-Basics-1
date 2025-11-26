@@ -77,6 +77,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 Ressourcengruppen sind **logische Container**, die zusammengehörige Cloud-Ressourcen (VMs, Datenbanken etc.) organisieren. Sie dienen als zentrale Ankerpunkte, um **IAM-Zugriffsrichtlinien auf die gesamte Gruppe anzuwenden** und so die Berechtigungsverwaltung zu vereinfachen. Zudem ermöglichen sie eine **klare Kostenverfolgung (Billing)** und die **einfache, isolierte Verwaltung** des gesamten Lebenszyklus der enthaltenen Ressourcen.
 
+&nbsp;
 
 <img src="{{ site.baseurl }}/screenshots/Ressourcengruppen.png" alt="Ressoucengruppen_explained" width="1500">
 
@@ -151,7 +152,99 @@ In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfü
 
 &nbsp;
 
-## **3.2 User einladen** 
+
+## **3.2 Access policys und Access groups**
+
+**Access Policy (Zugriffsrichtlinie):**
+
+Eine Access Policy ist das eigentliche Regelwerk, das definiert, wer (Subjekt) was (Ressource) wie (Rolle) tun darf. Sie besteht im Kern aus:
+
+Der Ziel-Ressource (z. B. "Alle Kubernetes Cluster in Ressourcengruppe X").
+
+Der Rolle (z. B. Viewer oder Administrator).
+
+**Access Groups (Zugriffsgruppen):**
+
+Eine Access Group ist ein logischer Container, der verschiedene Identitäten (Benutzer, Service-IDs, Trusted Profiles) bündelt. Sie dient der effizienten Verwaltung: Anstatt Berechtigungen jedem Nutzer einzeln zuzuweisen, fügen Sie den Nutzer einfach einer Gruppe (z. B. Admins oder Dev-Team) hinzu. Er erbt dann automatisch alle Rechte dieser Gruppe.
+
+**Best Practice:** 
+
+In der Praxis erstellen Sie eine Access Policy und weisen diese einer Access Group zu, die Sie dann User zuweisen. 
+
+Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtigungen direkt einzelnen Benutzern zuweisen, müssen Sie bei Änderungen (z. B. Teamwechsel oder Mitarbeiter-Austritt) jeden Benutzer manuell bearbeiten und jede Richtlinie einzeln entfernen. Dies ist extrem zeitaufwendig und fehleranfällig (Sicherheitsrisiko durch vergessene Rechte).
+
+&nbsp;
+
+
+## **3.3 Access groups erstellen (Plattform Admin Gruppe)** 
+
+Die Erstellung einer Platform Admin Access Group ist einer der wichtigsten ersten Schritte in jedem neuen IBM Cloud Account.
+
+**Warum erstellen wir sie als Erstes?**
+
+Initial verfügt nur der Account Owner über volle Verwaltungsrechte. Dies stellt ein massives Risiko dar (Single Point of Failure): Verlässt der Owner z.B das Unternehmen oder verliert den Zugriff, ist der gesamte Account handlungsunfähig.
+
+Aus diesem Grund erstellen wir bevor irgendeine andere Konfiguration stattfindet diese Gruppe, um Redundanz zu schaffen.
+
+**Zweck der Gruppe:**
+
+Diese Gruppe beinhaltet die Administratoren, die den Account technisch verwalten (User einladen, Billing einsehen, IAM steuern), ohne dabei den Account Owner Login nutzen zu müssen.
+
+**Empfohlene Berechtigungen:**
+
+Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
+
+- Administrator Rolle auf All Account Management Services (für Billing, Support, User-Management)
+
+- Administrator Rolle auf All Identity and Access enabled services (um anderen Teams Rechte zu geben)
+
+
+**Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:**
+
+1. Navigieren Sie in der oberen Leiste der IBM Cloud Konsole zum Menüpunkt ``Manage``
+
+2. Wählen Sie im Dropdown-Menü den Eintrag ``Access (IAM)`` aus
+
+3. Orientieren Sie sich in der linken Seitenleiste am Bereich ``Manage Access``
+
+4. Klicken Sie dort auf den Unterpunkt ``Access groups``
+
+5. Starten Sie die Erstellung einer neuen Gruppe durch Klick auf den blauen Button ``Create +``
+
+6. Geben Sie der Gruppe einen eindeutigen Namen (z. B. Platform-Admins) und eine kurze Beschreibung. Bestätigen Sie anschließend mit ``Create``
+
+7. Sie befinden sich nun in der Übersicht der neuen Gruppe. Klicken Sie oben in der Reiter-Leiste auf ``Access``
+
+8. Klicken Sie auf den blauen Button ``Assign access +``, um den Prozess der Rechtevergabe zu starten.
+
+9. Wählen Sie im ersten Schritt unter "Service" die Option ``All Account Management Services`` aus (dies steuert Zugriff auf Billing, User-Invites etc.)
+
+10. Scrollen Sie zu "Roles and actions" und setzen Sie das Häkchen bei der ``Rolle Administrator``
+
+11. Klicken Sie unten auf den Button ``Add``, um diese Regel vorzumerken
+
+12. Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All Identity and Access enabled services aus`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
+
+13. Wählen Sie unter "Roles and actions" auch hier erneut die Rolle ``Administrator`` aus
+
+14. Fügen Sie diese zweite Regel ebenfalls mit einem Klick auf ``Add`` hinzu
+
+15. Auf der rechten Seite sehen Sie nun im Bereich Summary eine Zusammenfassung der vorgemerkten Richtlinien. Überprüfen Sie die Auswahl und schließen Sie den Vorgang mit einem Klick auf ``Assign`` endgültig ab
+
+&nbsp;
+
+<img src="{{ site.baseurl }}/screenshots/admin_agrp1.png" alt="IAM_overview" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/admin_agrp2.png" alt="IAM_overview" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/admin_agrp3.png" alt="IAM_overview" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/admin_agrp4.png" alt="IAM_overview" width="1500">
+
+&nbsp;
+
+
+## **3.4 User einladen** 
 
 Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, müssen diese explizit eingeladen werden.
 
@@ -169,7 +262,7 @@ Befolgen Sie dazu folgende Schritte:
 
 6. Wählen Sie zwischen ``Access groups`` und ``Access policy``
 
-8. Wählen Sie Ihre ``Access groups`` oder ``Access policys`` aus
+8. Wählen Sie Ihre Platform Admin ``Access group`` aus
 
 9. Klicken Sie zuletzt auf ``Invite`` um die User einzuladen
 
@@ -181,23 +274,7 @@ Befolgen Sie dazu folgende Schritte:
 
 &nbsp;
 
-**Access Groups (Zugriffsgruppen):**
 
-Eine Access Group ist ein logischer Container, der verschiedene Identitäten (Benutzer, Service-IDs, Trusted Profiles) bündelt. Sie dient der effizienten Verwaltung: Anstatt Berechtigungen jedem Nutzer einzeln zuzuweisen, fügen Sie den Nutzer einfach einer Gruppe (z. B. Admins oder Dev-Team) hinzu. Er erbt dann automatisch alle Rechte dieser Gruppe.
-
-**Access Policy (Zugriffsrichtlinie):**
-
-Eine Access Policy ist das eigentliche Regelwerk, das definiert, wer (Subjekt) was (Ressource) wie (Rolle) tun darf. Sie besteht im Kern aus:
-
-Der Ziel-Ressource (z. B. "Alle Kubernetes Cluster in Ressourcengruppe X").
-
-Der Rolle (z. B. Viewer oder Administrator).
-
-**Best Practice:** 
-
-In der Praxis erstellen Sie eine Access Policy und weisen diese einer Access Group zu, die Sie dann User zuweisen. 
-
-Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtigungen direkt einzelnen Benutzern zuweisen, müssen Sie bei Änderungen (z. B. Teamwechsel oder Mitarbeiter-Austritt) jeden Benutzer manuell bearbeiten und jede Richtlinie einzeln entfernen. Dies ist extrem zeitaufwendig und fehleranfällig (Sicherheitsrisiko durch vergessene Rechte).
 
 
 
