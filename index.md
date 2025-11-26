@@ -320,7 +320,7 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw.png" alt="platform/service" width="1500">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw.png" alt="platform/service" width="1100">
 
 &nbsp;
 
@@ -361,4 +361,75 @@ Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Si
 
 &nbsp;
 
-## **Context based restrictions (CBR)**
+## **3.7 Context Based Restrictions (CBR)**
+
+Context Based Restrictions (CBR) erweitern das klassische IAM um eine weitere entscheidende Dimension.
+
+Während IAM ausschließlich regelt, **wer (Identität)** auf eine Ressource zugreifen darf, definiert CBR zusätzlich, **von wo (Netzwerk-Kontext)** dieser Zugriff erfolgen muss. Es fungiert somit als eine netzwerkbasierte Sicherheitsschicht, die nach der erfolgreichen Authentifizierung geprüft wird.
+
+**Das Konzept basiert auf zwei Hauptkomponenten:**
+
+1. Rules (Regeln)
+
+Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispielsweise: "Der Zugriff auf den Cloud Object Storage Bucket X ist nur erlaubt, wenn die Anfrage aus der Zone 'Firmen-VPN' kommt."
+
+**Warum ist das wichtig?**
+
+Durch diese zusätzliche Dimension schützt CBR effektiv vor Credential Theft. Selbst wenn ein Angreifer einen gültigen API-Key stiehlt (das "Wer" ist korrekt), wird der Zugriff verweigert, da er nicht aus dem sicheren Firmennetzwerk kommt (das "Wo" ist falsch).
+
+
+2. Network Zones (Netzwerkzonen)
+
+Hier definieren Sie vertrauenswürdige Ursprungsorte. Eine Zone ist eine "Allowlist" und kann beinhalten:
+
+Spezifische IP-Adressbereiche (z. B. das Firmen-VPN)
+
+Andere IBM Cloud VPCs
+
+Service References (um Cloud-Services untereinander zu autorisieren)
+
+**Um Context-Based Restrictions einzurichten, navigieren Sie wie folgt:**
+
+1. Gehen Sie in der oberen Leiste auf ``Manage``
+
+2. Wählen Sie den Eintrag ``Context-based restrictions``
+
+3. Wählen Sie anschließend den gewünschten Bereich: ``Rules`` oder ``Network zones``
+
+ <img src="{{ site.baseurl }}/screenshots/cbr1" alt="platform/cbr1" width="1500">
+
+ &nbsp;
+
+**Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?**
+
+ <img src="{{ site.baseurl }}/screenshots/cbr1" alt="platform/cbr2" width="1500">
+
+Eine sichere Cloud-Architektur nutzt das Prinzip "Defense in Depth" und kombiniert zwei grundlegende Schutzebenen:
+
+1. **Network-Based Protection (Die Infrastruktur-Ebene)**
+
+Hier wird der Datenverkehr auf Basis von **IP-Adressen, Ports und Protokollen** gesteuert. Es geht darum, ob ein Datenpaket physisch ankommen darf.
+
+``Security Groups``: Eine **Stateful Firewall**, die direkt an der virtuellen Server-Instanz (VSI) sitzt. Sie regelt exakt, welcher Traffic den Server erreichen oder verlassen darf.
+
+``Access Control Lists (ACLs)``: Ein ``Stateless Filter`` auf Subnetz-Ebene. Sie fungieren als erste Barriere und steuern, was überhaupt in das Subnetz hinein- oder herausfließen darf.
+
+2. ``Identity-Based Protection (Die Logik-Ebene)``
+
+Hier wird der Zugriff auf Basis von ``Identitäten und Kontext`` gesteuert. Es geht darum, ob ein Benutzer oder Dienst eine Aktion (API-Call) ausführen darf, selbst wenn er netzwerktechnisch Zugriff hätte.
+
+``IAM``: Regelt das **"Wer" und "Was"**. Es authentifiziert den User und prüft, ob er die notwendigen Rechte (Rollen) hat.
+
+``Context-Based Restrictions (CBR)``: Verknüpft die Identität mit dem Netzwerk. Es prüft, ob der authentifizierte User auch aus einem erlaubten Netzwerk kommt.
+
+ &nbsp;
+
+**Zusammenfassung:**
+
+- **Network Protection** verhindert, dass unerwünschte Datenpakete Ihre Server erreichen (z. B. Hacker-Portscans). 
+
+- **Identity Protection** verhindert, dass authentifizierte Nutzer unerlaubte Aktionen durchführen oder gestohlene Zugangsdaten von unsicheren Orten genutzt werden.
+
+
+
+
