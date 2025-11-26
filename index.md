@@ -5,6 +5,7 @@ layout: default
 # 1. Erste Schritte
 
 ---
+<p>
 
 ## **1.1 Login im IBM Cloud Portal**
 
@@ -41,7 +42,7 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 
 <img src="{{ site.baseurl }}/screenshots/MFA2:2.png" alt="MFA" width="1500">
 
-
+<p>
 
 ## **1.3 Account-Einstellungen / Aktivieren einer Subscription**
 
@@ -65,6 +66,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 <img src="{{ site.baseurl }}/screenshots/Settings2-2.png" alt="AccSettings" width="1500">
 
+<p>
 
 # 2 Arbeiten mit Ressorucengruppen
 ---
