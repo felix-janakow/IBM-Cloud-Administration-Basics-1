@@ -65,7 +65,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 <img src="{{ site.baseurl }}/screenshots/Settins1-2.png" alt="AccSettings" width="1500">
 
-<img src="{{ site.baseurl }}/screenshots/Settings2-2.png" alt="AccSettings" width="1500">
+<img src="{{ site.baseurl }}/screenshots/Settings2-2_.png" alt="AccSettings" width="1500">
 
 &nbsp;
 
@@ -104,7 +104,7 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 &nbsp;
 
-<img src="{{ site.baseurl }}/screenshots/create_rc_grp.png" alt="Ressoucengruppen_explained" width="1500">
+<img src="{{ site.baseurl }}/screenshots/create_rc_grp.png_" alt="Ressoucengruppen_explained" width="1500">
 
 &nbsp;
 
