@@ -827,7 +827,10 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 ## **6.2 Enterprise Account Beispielarchitekturen**
 
 &nbsp;
+
 - **Automobilhersteller**
+&nbsp;
+
 
 <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco_.png" alt="EnterpriseAccountCarco" width="1200">
 
@@ -835,6 +838,8 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 &nbsp;
 
 - **Business Partner mit Endkunden**
+
+&nbsp;
 
 <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP_.png" alt="EnterpriseAccountBP" width="1000">
 
@@ -844,8 +849,131 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 ---
 &nbsp;
 
-## 7.1 **Support Center** 
+## **7.1 Support Center** 
+
+Das Support Center ist Ihre zentrale Anlaufstelle für alle technischen Anfragen, Problemmeldungen und Hilfestellungen rund um die IBM Cloud Platform und ihre Services.
+
+**Navigation:** 
+
+Klicken Sie in der oberen Navigationsleiste auf ``Help`` und dann den Menüpunkt ``Support center``
+
+**Die wichtigsten Funktionen:**
+
+- **Case Management (Tickets):** 
+
+    Hier können Sie neue Support-Fälle ("Cases") erstellen, wenn Sie auf technische Probleme stoßen. Die Bearbeitungszeit hängt dabei von dem Scheweregrad und Ihrem Support Plan ab 
+
+- **FAQs & Dokumentation:**
+
+    Bevor Sie ein Ticket eröffnen, können Sie die integrierte Suche nutzen, um in der Wissensdatenbank nach bekannten Lösungen und Best Practices zu recherchieren.
 
 
+<img src="{{ site.baseurl }}/screenshots/SupportCenter.png" alt="SupportCenter" width="1250">
 
+&nbsp;
 
+## **7.2 Wichtigkeit von Notifications** 
+
+In einer dynamischen Cloud-Umgebung ist das regelmäßige Prüfen der Benachrichtigungen ***(Glocken-Symbol oben rechts)*** keine optionale Aufgabe, sondern eine betriebsnotwendige Pflicht.
+
+Das Ignorieren dieser Meldungen kann gravierende Folgen für die Stabilität Ihrer Anwendungen haben. 
+
+**IBM Cloud nutzt diesen Kanal für kritische Informationen:**
+
+**Deprecations (Abkündigungen):**
+
+Cloud-Services und Runtimes entwickeln sich ständig weiter. Wenn eine bestimmte Datenbank-Version oder Software-Komponente ihr "End of Life" erreicht, werden Sie hier im Voraus gewarnt. Übersehen Sie diese Warnung, kann es passieren, dass Ihre Anwendung von einem Tag auf den anderen nicht mehr funktioniert oder nicht mehr bereitgestellt werden kann.
+
+**Geplante Wartungsarbeiten:**
+
+Sie erhalten Informationen über anstehende Updates an der physischen Infrastruktur oder den Services. Dies gibt Ihnen die Zeit, Hochverfügbarkeits-Mechanismen zu prüfen oder Wartungsfenster einzuplanen.
+
+**Required Actions (Handlungsbedarf):** 
+
+Oft erfordern Sicherheitsupdates eine aktive Handlung Ihrerseits (z. B. "Starten Sie den Cluster neu, um den Sicherheitspatch anzuwenden").
+
+**Empfehlung:**
+
+Prüfen Sie das Notification Center regelmäßig auf Meldungen der Kategorien High oder Critical, um ungeplante Ausfälle ("Silent Failures") zu vermeiden.
+
+**Zusätzlich:**
+
+- **Cloud Status**: 
+    
+    Über das Support Center > ``View cloud status`` erreichen Sie das zentrale Dashboard zur Überwachung der gesamten IBM Cloud Plattform. 
+    
+    Hier prüfen Sie nicht nur die aktuelle Verfügbarkeit aller Services (Overview), sondern erhalten auch Einblick in **geplante Wartungsarbeiten** (Planned maintenance), **kritische Sicherheitswarnungen** (Security bulletins), **Ursachenberichte zu vergangenen Störungen** (Incident reports), sowie **Release Notes** und **Announcements**
+
+<img src="{{ site.baseurl }}/screenshots/Notifications.png" alt="Notifications" width="1500">
+
+&nbsp;
+
+## **7.3 Kostenschätzungen** 
+
+Der Cost Estimator ist ein integriertes Planungswerkzeug, mit dem Sie die monatlichen Kosten für Ihre geplante Infrastruktur prognostizieren können, bevor Sie Ressourcen bereitstellen. Er eignet sich ideal, um Budgets zu planen oder Genehmigungen einzuholen.
+
+**So nutzen Sie das Tool:**
+
+**Im Katalog:**
+
+Wenn Sie einen Service konfigurieren, sehen Sie in der rechten Seitenleiste die aktuelle Preisschätzung. Anstatt direkt auf Create zu klicken, wählen Sie den Button ``Add to estimate``. Dies fügt die Konfiguration Ihrem vorläufigen Warenkorb hinzu.
+
+**Schätzung überprüfen:** 
+
+Klicken Sie in der oberen Kopfzeile der Konsole auf das Taschenrechner-Symbol (Cost estimator). Hier sehen Sie die gesammelte Liste aller hinzugefügten Services.
+
+&nbsp;
+
+**Funktionen in der Übersicht:**
+
+**Anpassung:** 
+
+Sie können Mengen (z. B. Anzahl der Server oder GB Speicher) nachträglich ändern, um verschiedene Szenarien durchzuspielen.
+
+**Währung:**
+
+Stellen Sie die Anzeige auf Ihre lokale Währung um.
+
+**Export:** 
+
+Über den Button Download CSV/XLSX oder Print/PDF können Sie einen offiziellen Kostenvoranschlag generieren, um diesen beispielsweise an die Finanzabteilung zur Freigabe weiterzuleiten.
+
+<img src="{{ site.baseurl }}/screenshots/CostEstimator.png" alt="CostEstimator" width="1500">
+
+&nbsp;
+
+## **7.3 Dokumentationen**
+
+Die [offizielle Dokumentation](https://cloud.ibm.com/docs) ist Ihre wichtigste Wissensquelle. Sie bietet technische Referenzen, die für den sicheren Betrieb unerlässlich sind.
+
+**Wie Sie zur Dokumentation gelangen:**
+
+Sie haben zwei Wege, um auf die Inhalte zuzugreifen:
+
+**Global:**
+
+Klicken Sie in der oberen Kopfzeile der Konsole auf den Eintrag ``Docs`` unter dem ``? Symbol``. Dies führt Sie zur zentralen Startseite mit einer Suche über alle Dienste.
+
+**Kontextbezogen:**
+
+ Wenn Sie sich gerade in der Konfiguration eines spezifischen Services (z. B. COS) befinden, klicken Sie im linken oder oberen Menü auf den Reiter ``Docs``. Dies bringt Sie direkt zu den spezifischen Anleitungen für genau diesen Dienst.
+
+ &nbsp;
+
+**Warum Sie die Docs nutzen sollten:**
+
+**Schritt-für-Schritt-Tutorials:** 
+
+Anstatt durch "Trial and Error" Zeit zu verlieren, finden Sie hier geprüfte Anleitungen ("Getting Started"), um Ressourcen korrekt und nach Best Practices aufzusetzen.
+
+**API & CLI Referenzen:**
+
+Für Entwickler und Automatisierung sind hier alle Befehle, Endpunkte und SDKs dokumentiert, die Sie benötigen, um die Cloud programmatisch zu steuern.
+
+**Troubleshooting:** 
+
+Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" oft schnelle Lösungen für gängige Fehlermeldungen und Konfigurationsprobleme.
+
+<img src="{{ site.baseurl }}/screenshots/Docs1.png" alt="Docs1" width="1500">
+
+<img src="{{ site.baseurl }}/screenshots/Docs2.png" alt="Docs2" width="1500">
