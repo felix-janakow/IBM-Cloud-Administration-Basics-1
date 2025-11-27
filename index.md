@@ -760,7 +760,7 @@ Bestätigen Sie die Einrichtung abschließend mit einem Klick auf ``Create``
 
 Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Organisationen ermöglicht, mehrere IBM Cloud Accounts unter einem zentralen Dach zusammenzufassen. Dies vereinfacht die Verwaltung, Abrechnung und Governance erheblich.
 
-<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="1000">
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="1200">
 
 &nbsp;
 
@@ -782,7 +782,7 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Obwohl die Rechnung zentral bezahlt wird, bietet das System volle Transparenz über den Verbrauch der einzelnen Accounts. Das Unternehmen kann so genau ermitteln, welche Abteilung oder welches Projekt wie viele Kosten verursacht hat, und diese intern weiterverrechnen.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCreditPool.png" alt="EnterpriseBasicsCreditPool" width="1000">
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCreditPool.png" alt="EnterpriseBasicsCreditPool" width="1200">
 
     &nbsp;
 
@@ -803,9 +803,11 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Das Support-Level (z. B. Premium oder Advanced) wird zentral festgelegt und gilt automatisch für jeden Account innerhalb der Hierarchie.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources2.png" alt="EnterpriseBasicsRessources2" width="1000">
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources2.png" alt="EnterpriseBasicsRessources2" width="1200">
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources.png" alt="EnterpriseBasicsRessources" width="1000">
+    &nbsp;
+
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources.png" alt="EnterpriseBasicsRessources" width="1200">
 
     &nbsp;
 
@@ -817,9 +819,33 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
     
     Sie können Governance-Regeln und Zugriffsrichtlinien (IAM) zentral definieren und nach unten vererben. Dies stellt sicher, dass Sicherheitsstandards unternehmensweit eingehalten werden, ohne jeden Account einzeln konfigurieren zu müssen.
 
-    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountGovernance.png" alt="EnterpriseBasicsGovernance" width="1000">
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountGovernance.png" alt="EnterpriseBasicsGovernance" width="1200">
 
     
 &nbsp;
+
+
+**Beispielarchitekturen:**
+
+- **Automobilhersteller**
+
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCarco.png" alt="EnterpriseAccountCarco" width="1200">
+
+
+&nbsp;
+
+- **Business Partner mit Endkunden**
+
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountBP.png" alt="EnterpriseAccountBP" width="1200">
+
+&nbsp;
+
+# 7. Zusätzliche Informationen
+---
+&nbsp;
+
+## 7.1 Support Center 
+
+
 
 
