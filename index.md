@@ -664,7 +664,7 @@ Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengr
 
 &nbsp;
 
-## **5.3 Cost Analysis **
+## **5.3 Cost Analysis**
 
 Die Cost Analysis dient dazu, Ihre Ausgaben strategisch zu untersuchen. Sie bietet Ihnen leistungsstarke Werkzeuge, um nicht nur Gesamtsummen zu sehen, sondern die Kostentreiber durch präzise Filterung zu isolieren und visuell aufzubereiten.
 
@@ -748,8 +748,78 @@ Legen Sie einen Geldbetrag fest (z. B. 500 USD). Sie können dann einstellen, be
 Bestätigen Sie die Einrichtung abschließend mit einem Klick auf ``Create``
 
 
-<img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="spending_notifications1" width="1500">
+<img src="{{ site.baseurl }}/screenshots/spending_notifications2.png" alt="spending_notifications2" width="1500">
 
 &nbsp;
 
-# 6. Enterprise Basics 
+# 6. Enterprise Accounts 
+---
+&nbsp;
+
+## 6.1 Enterprise Account Basics
+
+Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Organisationen ermöglicht, mehrere IBM Cloud Accounts unter einem zentralen Dach zusammenzufassen. Dies vereinfacht die Verwaltung, Abrechnung und Governance erheblich.
+
+<img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="1000">
+
+&nbsp;
+
+**Die Vorteile und Funktionen gliedern sich in drei Hauptbereiche:**
+
+- **Zentralisierte Abrechnung & Kostenmanagement**
+
+    Der Enterprise Account fungiert als zentrale Zahlstelle für alle untergeordneten Accounts.
+
+   **Konsolidierte Rechnung:** 
+   
+   Anstatt vieler Einzelrechnungen erhalten Sie eine einzige, konsolidierte Rechnung für das gesamte Unternehmen.
+
+    **Credit Pooling:** 
+    
+    Subscription Credits (Guthaben) werden auf Enterprise-Ebene in einem gemeinsamen Pool gesammelt. Alle Accounts in der Hierarchie bedienen sich aus diesem Pool, um ihre "Entitlements" zu decken. Das verhindert, dass Guthaben in einem Account verfällt, während ein anderer Account extra zahlen muss.
+
+    **Downstream visibility:**
+    
+    Obwohl die Rechnung zentral bezahlt wird, bietet das System volle Transparenz über den Verbrauch der einzelnen Accounts. Das Unternehmen kann so genau ermitteln, welche Abteilung oder welches Projekt wie viele Kosten verursacht hat, und diese intern weiterverrechnen.
+
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountCreditPool.png" alt="EnterpriseBasicsCreditPool" width="1000">
+
+    &nbsp;
+
+- **Flexible Account-Hierarchie**
+
+    Sie können die Struktur Ihres Unternehmens in der Cloud exakt abbilden.
+
+    **Account-Integration:** 
+    
+    Sie haben die Flexibilität, jederzeit völlig neue Accounts zu erstellen oder bereits bestehende Accounts nachträglich in die Enterprise-Hierarchie zu importieren.
+
+    **Ressourcennutzung:** 
+    
+    Wichtig zu verstehen ist, dass die eigentlichen Ressourcen (Server, Datenbanken) weiterhin auf Account-Ebene konsumiert und betrieben werden. 
+    ***Der Enterprise-Account dient lediglich der Verwaltung.***
+
+    **Einheitlicher Support:** 
+    
+    Das Support-Level (z. B. Premium oder Advanced) wird zentral festgelegt und gilt automatisch für jeden Account innerhalb der Hierarchie.
+
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources2.png" alt="EnterpriseBasicsRessources2" width="1000">
+
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountRessources.png" alt="EnterpriseBasicsRessources" width="1000">
+
+    &nbsp;
+
+- **Governance und Sicherheit**
+
+    Der Enterprise Account bietet eine zentrale Steuerungsebene für Richtlinien.
+
+    **Zentrale Policies:** 
+    
+    Sie können Governance-Regeln und Zugriffsrichtlinien (IAM) zentral definieren und nach unten vererben. Dies stellt sicher, dass Sicherheitsstandards unternehmensweit eingehalten werden, ohne jeden Account einzeln konfigurieren zu müssen.
+
+    <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountGovernance.png" alt="EnterpriseBasicsGovernance" width="1000">
+
+    
+&nbsp;
+
+
