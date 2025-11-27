@@ -2,7 +2,13 @@
 layout: default
 ---
 
+<details>
+
+<summary> 
+
 # 1. Erste Schritte
+
+</summary> 
 ---
 &nbsp;
 
@@ -74,6 +80,8 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 <img src="{{ site.baseurl }}/screenshots/Settings2-2_.png" alt="AccSettings" width="1500">
 
 &nbsp;
+
+</details>
 
 # 2. Arbeiten mit Ressorucengruppen
 ---
@@ -958,7 +966,7 @@ Klicken Sie in der oberen Kopfzeile der Konsole auf den Eintrag ``Docs`` unter d
 
  Wenn Sie sich gerade in der Konfiguration eines spezifischen Services (z. B. COS) befinden, klicken Sie im linken oder oberen Menü auf den Reiter ``Docs``. Dies bringt Sie direkt zu den spezifischen Anleitungen für genau diesen Dienst.
 
- &nbsp;
+&nbsp;
 
 **Warum Sie die Docs nutzen sollten:**
 
@@ -974,6 +982,18 @@ Für Entwickler und Automatisierung sind hier alle Befehle, Endpunkte und SDKs d
 
 Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" oft schnelle Lösungen für gängige Fehlermeldungen und Konfigurationsprobleme.
 
-<img src="{{ site.baseurl }}/screenshots/Docs1.png" alt="Docs1" width="1500">
+<img src="{{ site.baseurl }}/screenshots/Docs.png" alt="Docs1" width="1500">
 
 <img src="{{ site.baseurl }}/screenshots/Docs2.png" alt="Docs2" width="1500">
+
+&nbsp;
+
+# 8. Best practices
+---
+
+| Typ | Beschreibung |
+| :--- | :--- |
+| Cluster-Prod | OpenShift |  
+| Datenbank-V1 | PostgreSQL |  
+| Archiv-Speicher | COS |  
+
