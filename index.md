@@ -2,15 +2,10 @@
 layout: default
 ---
 
-<details>
-
-<summary> 
-
 # 1. Erste Schritte
-
-</summary> 
 ---
 &nbsp;
+
 
 ## **1.1 Login im IBM Cloud Portal**
 
@@ -81,7 +76,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 &nbsp;
 
-</details>
+
 
 # 2. Arbeiten mit Ressorucengruppen
 ---
