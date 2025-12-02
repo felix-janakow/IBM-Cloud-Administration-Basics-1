@@ -211,7 +211,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 - Administrator Rolle auf All Account Management Services (für Billing, Support, User-Management)
 
-- Administrator Rolle auf All IAM Account Management services (um anderen Teams Rechte zu geben)
+- Administrator Rolle auf All Identity and Access enabled services (um anderen Teams Rechte zu geben)
 
 
 **Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:**
@@ -238,7 +238,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 **11.** Klicken Sie unten auf den Button ``Add``, um diese Regel vorzumerken
 
-**12.** Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All IAM Account Management services`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
+**12.** Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option ``All Identity and Access enabled services`` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
 
 **13.** Wählen Sie unter "Roles and actions" auch hier erneut die Rolle ``Administrator`` aus
 
@@ -254,7 +254,7 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 <img src="{{ site.baseurl }}/screenshots/admin_agrp3.png" alt="IAM_overview" width="1500">
 
-<img src="{{ site.baseurl }}/screenshots/admin_agrp4.png" alt="IAM_overview" width="1500">
+<img src="{{ site.baseurl }}/screenshots/admin_agrp4_.png" alt="IAM_overview" width="1500">
 
 &nbsp;
 
