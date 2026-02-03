@@ -250,7 +250,7 @@ window.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- ENGLISH VERSION -->
-<div class="lang-en">
+<div class="lang-en" markdown="1">
 
 # 1. First Steps
 
@@ -963,7 +963,7 @@ IBM Cloud provides comprehensive documentation for all services and features.
 </div>
 
 <!-- GERMAN VERSION -->
-<div class="lang-de">
+<div class="lang-de" markdown="1">
 
 # 1. Erste Schritte
 
