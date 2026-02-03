@@ -344,7 +344,7 @@ Resource groups are **logical containers** that organize related cloud resources
 
 The physical location of the resources is irrelevant for grouping. A resource group can contain resources that have been deployed across different geographic zones and regions.
 
-<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Resource Groups Zones" width="950">
+<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Resource Groups Zones" width="750">
 
 ---
 
@@ -1053,7 +1053,7 @@ Ressourcengruppen sind **logische Container**, die zusammengehörige Cloud-Resso
 
 Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant. Eine Ressourcengruppe kann Ressourcen enthalten, die über verschiedene geografische Zonen und Regionen verteilt bereitgestellt wurden.
 
-<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="950">
+<img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="750">
 
 
 ## 2.2 Ressourcengruppen anlegen
@@ -1236,7 +1236,7 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 <img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="platform/service" width="950">
 
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="platform/service" width="1100">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="platform/service" width="650">
 
 
 
