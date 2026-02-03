@@ -6,7 +6,7 @@ title: Cloud Administration Basics I
 <style>
 /* Modern Language Toggle Button */
 .language-toggle {
-  position: fixed !important;
+  position: absolute !important;
   top: 10px !important;
   right: 20px !important;
   z-index: 9999 !important;
