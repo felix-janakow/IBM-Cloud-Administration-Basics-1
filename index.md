@@ -978,7 +978,6 @@ Der erste Schritt um mit der IBM Cloud zu arbeiten ist die Anmeldung im IBM Clou
 <img src="{{ site.baseurl }}/screenshots/IBMCloud_Login.png" alt="IBM Cloud Login" width="550">
 
 
----
 
 ## 1.2 Multi-Faktor-Authentisierung (MFA) aktivieren
 
@@ -1003,7 +1002,6 @@ Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr di
 
 
 
----
 
 ## 1.3 Account-Einstellungen / Aktivieren einer Subscription
 
@@ -1026,7 +1024,6 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 
 <img src="{{ site.baseurl }}/screenshots/Settings2-2_.png" alt="AccSettings" width="1500">
 
----
 
 # 2. Arbeiten mit Ressourcengruppen
 
@@ -1040,7 +1037,6 @@ Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant.
 
 <img src="{{ site.baseurl }}/screenshots/res_grp_zonen.png" alt="Ressoucengruppen_explained" width="1500">
 
----
 
 ## 2.2 Ressourcengruppen anlegen
 
@@ -1094,7 +1090,6 @@ In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfü
 
 
 
----
 
 ## 3.2 Access policys und Access groups
 
@@ -1162,7 +1157,6 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 
 
----
 
 ## 3.4 User einladen (Admins)
 Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, müssen diese explizit eingeladen werden.
@@ -1184,7 +1178,6 @@ Befolgen Sie dazu folgende Schritte:
 <img src="{{ site.baseurl }}/screenshots/invite_users2.png" alt="user_invite2" width="1500">
 
 
----
 
 ## 3.5 Konzept: Platform Access vs. Service Access
 
@@ -1228,7 +1221,6 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 <img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="platform/service" width="1100">
 
 
----
 
 ## 3.6 Custom Roles erstellen
 
@@ -1259,7 +1251,6 @@ Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Si
 <img src="{{ site.baseurl }}/screenshots/custom_roles_2.png" alt="platform/service" width="1500">
 
 
----
 
 ## 3.7 Context Based Restrictions (CBR)
 
@@ -1354,7 +1345,6 @@ Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 
 
 
----
 
 ## 4.2 Provisionieren von Ressourcen aus dem Katalog
 
@@ -1376,7 +1366,6 @@ Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die f
 <img src="{{ site.baseurl }}/screenshots/catalog2.png" alt="catalog2" width="1500">
 
 
----
 
 ## 4.3 Managen / löschen von Ressourcen
 
@@ -1432,7 +1421,6 @@ Navigation zu Billing and Usage:
 <img src="{{ site.baseurl }}/screenshots/billingandusage1.png" alt="billingandusage1" width="1500">
 
 
----
 
 ## 5.2 Usage
 Der Bereich Usage ist Ihr primäres Werkzeug, um die monatliche Rechnung zu validieren. Er ermöglicht es Ihnen, Kosten präzise auf Ressourcengruppen herunterzubrechen und bis zur einzelnen technischen Metrik nachzuvollziehen.
@@ -1683,7 +1671,6 @@ Klicken Sie in der oberen Navigationsleiste auf `Help` und dann den Menüpunkt `
 <img src="{{ site.baseurl }}/screenshots/SupportCenter.png" alt="SupportCenter" width="1250">
 
 
----
 
 ## 7.2 Wichtigkeit von Notifications
 In einer dynamischen Cloud-Umgebung ist das regelmäßige Prüfen der Benachrichtigungen ***(Glocken-Symbol oben rechts)*** keine optionale Aufgabe, sondern eine betriebsnotwendige Pflicht.
@@ -1713,7 +1700,6 @@ Prüfen Sie das Notification Center regelmäßig auf Meldungen der Kategorien Hi
 <img src="{{ site.baseurl }}/screenshots/Notifications.png" alt="Notifications" width="1500">
 
 
----
 
 ## 7.3 Kostenschätzungen
 Der Cost Estimator ist ein integriertes Planungswerkzeug, mit dem Sie die monatlichen Kosten für Ihre geplante Infrastruktur prognostizieren können, bevor Sie Ressourcen bereitstellen. Er eignet sich ideal, um Budgets zu planen oder Genehmigungen einzuholen.
@@ -1739,7 +1725,6 @@ Stellen Sie die Anzeige auf Ihre lokale Währung um.
 <img src="{{ site.baseurl }}/screenshots/CostEstimator.png" alt="CostEstimator" width="1500">
 
 
----
 
 ## 7.3 Dokumentationen
 
