@@ -13,16 +13,16 @@ title: Cloud Administration Basics I
   background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(15, 98, 254, 0.3);
+  box-shadow: 0 3px 8px rgba(15, 98, 254, 0.3);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .language-toggle:hover {
