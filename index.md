@@ -6,10 +6,10 @@ title: Cloud Administration Basics I
 <style>
 /* Modern Language Toggle Button */
 .language-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+  position: fixed !important;
+  top: 10px !important;
+  right: 20px !important;
+  z-index: 9999 !important;
   background: linear-gradient(135deg, #0f62fe 0%, #0353e9 100%);
   color: white;
   border: none;
