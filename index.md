@@ -98,6 +98,15 @@ p {
   line-height: 1.8;
 }
 
+/* Center all images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 ul, ol {
   margin-bottom: 20px;
   padding-left: 30px;
