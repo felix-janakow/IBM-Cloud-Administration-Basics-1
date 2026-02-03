@@ -514,9 +514,9 @@ Service Access refers to actions that take place within the service, mostly via 
 - A user with the Reader role can download files
 - **But:** They cannot delete the COS instance itself or invite other users to it
 
-<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="Platform vs Service Access" width="950">
+<img src="{{ site.baseurl }}/screenshots/platform:service.png" alt="Platform vs Service Access" width="850">
 
-<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="1100">
+<img src="{{ site.baseurl }}/screenshots/platform:service_excalidraw_.png" alt="Platform vs Service Access Diagram" width="850">
 
 ---
 
