@@ -984,18 +984,15 @@ Der erste Schritt um mit der IBM Cloud zu arbeiten ist die Anmeldung im IBM Clou
 
 Nach der Anmeldung im IBM Cloud Account sollte der erste Schritt die Aktivierung der Multi-Faktor-Authentifizierung (MFA) sein.
 
-**Warum MFA?**
-
+### Warum MFA?
 Ein ausschließlich passwortgeschütztes Konto erfüllt heutzutage nicht mehr die gängigen Sicherheitsanforderungen. MFA ist in vielen Bereichen wie Banking oder sozialen Netzwerken bereits Standard und wird auch in der IBM Cloud **als Best Practice empfohlen**.
 
-**Um MFA zu aktivieren befolgen Sie folgende Schritte:**
-
+### Um MFA zu aktivieren befolgen Sie folgende Schritte:
 1. Navigieren Sie in der oberen Leiste zu `Manage` und wählen Sie den Unterpunkt `Access (IAM)`
 2. In der linken Seitenleiste klicken Sie auf `Settings`
 3. Unter `Settings` wechseln Sie zu `Authentication`
 
-**Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll. Die empfohlene Einstellung ist:**
-
+### Hier können Sie nun auswählen, wie die MFA eingerichtet werden soll. Die empfohlene Einstellung ist:
 - **MFA for a user with an IBMid**  
 - **Either**, MFA für federated und non-federated User aktivieren
 
@@ -1020,8 +1017,7 @@ Um wichtige Informationen wie den Account-Namen oder die Account-ID herauszufind
 - Virtual Routing and Forwarding
 - Service Endpoints
 
-**zu verwalten, gehen Sie wie folgt vor:**
-
+### zu verwalten, gehen Sie wie folgt vor:
 1. Navigieren Sie in der oberen Leiste zu `Manage`
 2. Wählen Sie den Unterpunkt `Account`
 3. Klicken Sie in der Seitenleiste auf `Account Settings`
@@ -1050,16 +1046,11 @@ Der physische Standort der Ressourcen ist für die Gruppierung dabei irrelevant.
 
 Planen Sie Ihre Hierarchie, bevor Sie die erste Ressourcengruppe anlegen. Überlegen Sie, ob eine Gliederung nach Umgebungen (Dev/Test), Projekten oder Teams für Ihren Fall am besten geeignet ist. Berücksichtigen Sie dabei, wie Sie Berechtigungen vergeben, Kosten zuordnen und Ressourcen im Team verwalten möchten.
 
-Eine Ressourcengruppe wird wie folgt angelegt: 
-
+### Eine Ressourcengruppe wird wie folgt angelegt:
 1. Navigieren Sie in der oberen Leiste zu `Manage`
-
 2. Wählen Sie den Unterpunkt `Account`
-
 3. Klicken Sie auf der linken Leiste auf `Account resources`
-
 4. Navigieren Sie in den Unterpunkt `Resource groups`
-
 5. Auf der rechten Seite können Sie nun auf `Create +` klicken
 
 
@@ -1070,7 +1061,8 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 # 3. Identity and Access Management (IAM)
 
 ## 3.1 IAM-Überblick
-**Identitätsverwaltung (Manage Identities)**
+
+### Identitätsverwaltung (Manage Identities)
 
 - **Trusted Profiles:** Ermöglichen eine sichere, passwortlose Authentifizierung für Compute-Ressourcen (z. B. Cluster, VPCs) oder föderierte Nutzer. Sie machen die Verwaltung langlebiger Credentials in Anwendungen überflüssig.
 
@@ -1080,7 +1072,7 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 
 - **Identity Providers:** Ermöglicht die Anbindung externer Firmenverzeichnisse (z. B. via SAML oder OpenID Connect). Benutzer authentifizieren sich mit ihren bestehenden Unternehmens-Zugangsdaten (Single Sign-On).
 
-**Zugriffssteuerung (Manage Access)**
+### Zugriffssteuerung (Manage Access)
 
 - **Access Groups:** Das wichtigste Instrument für effiziente Rechteverwaltung. IAM-Richtlinien werden einmalig der Gruppe zugewiesen. Alle Mitglieder (Benutzer, Service-IDs) erben diese Berechtigungen automatisch.
 
@@ -1092,10 +1084,8 @@ Eine Ressourcengruppe wird wie folgt angelegt:
 <img src="{{ site.baseurl }}/screenshots/IAM_overview.png" alt="IAM_overview" width="1500">
 
 
-**Zugriff auf die IAM-Verwaltung:**
-
+### Zugriff auf die IAM-Verwaltung:
 1. Klicken Sie in der oberen Navigationsleiste auf `Manage`
-
 2. Wählen Sie im Dropdown-Menü den Punkt `Acess (IAM)`
 
 In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfügbaren IAM-Optionen und Einstellungen
@@ -1108,20 +1098,17 @@ In der linken Seitenleiste finden Sie anschließend eine Übersicht aller verfü
 
 ## 3.2 Access policys und Access groups
 
-**Access Policy (Zugriffsrichtlinie):**
-
+### Access Policy (Zugriffsrichtlinie):
 Eine Access Policy ist das eigentliche Regelwerk, das definiert, wer (Subjekt) was (Ressource) wie (Rolle) tun darf. Sie besteht im Kern aus:
 
 Der Ziel-Ressource (z. B. "Alle Kubernetes Cluster in Ressourcengruppe X").
 
 Der Rolle (z. B. Viewer oder Administrator).
 
-**Access Groups (Zugriffsgruppen):**
-
+### Access Groups (Zugriffsgruppen):
 Eine Access Group ist ein logischer Container, der verschiedene Identitäten (Benutzer, Service-IDs, Trusted Profiles) bündelt. Sie dient der effizienten Verwaltung: Anstatt Berechtigungen jedem Nutzer einzeln zuzuweisen, fügen Sie den Nutzer einfach einer Gruppe (z. B. Admins oder Dev-Team) hinzu. Er erbt dann automatisch alle Rechte dieser Gruppe.
 
-**Best Practice:** 
-
+### Best Practice:
 In der Praxis erstellen Sie eine Access Policy und weisen diese einer Access Group zu, die Sie dann User zuweisen. 
 
 Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtigungen direkt einzelnen Benutzern zuweisen, müssen Sie bei Änderungen (z. B. Teamwechsel oder Mitarbeiter-Austritt) jeden Benutzer manuell bearbeiten und jede Richtlinie einzeln entfernen. Dies ist extrem zeitaufwendig und fehleranfällig (Sicherheitsrisiko durch vergessene Rechte).
@@ -1131,18 +1118,15 @@ Individuelle Policies sind schwer wartbar (nicht skalierbar). Wenn Sie Berechtig
 ## 3.3 Access groups erstellen (Plattform Admin Gruppe)
 Die Erstellung einer Platform Admin Access Group ist einer der wichtigsten ersten Schritte in jedem neuen IBM Cloud Account.
 
-**Warum erstellen wir sie als Erstes?**
-
+### Warum erstellen wir sie als Erstes?
 Initial verfügt nur der Account Owner über volle Verwaltungsrechte. Dies stellt ein massives Risiko dar (Single Point of Failure): Verlässt der Owner z.B das Unternehmen oder verliert den Zugriff, ist der gesamte Account handlungsunfähig.
 
 Aus diesem Grund erstellen wir bevor irgendeine andere Konfiguration stattfindet diese Gruppe, um Redundanz zu schaffen.
 
-**Zweck der Gruppe:**
-
+### Zweck der Gruppe:
 Diese Gruppe beinhaltet die Administratoren, die den Account technisch verwalten (User einladen, Billing einsehen, IAM steuern), ohne dabei den Account Owner Login nutzen zu müssen.
 
-**Empfohlene Berechtigungen:**
-
+### Empfohlene Berechtigungen:
 Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 
 - Administrator Rolle auf All Account Management Services (für Billing, Support, User-Management)
@@ -1150,36 +1134,21 @@ Diese Gruppe erhält typischerweise die höchsten Rechte, wie z.B.:
 - Administrator Rolle auf All Identity and Access enabled services (um anderen Teams Rechte zu geben)
 
 
-**Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:**
-
+### Befolgen Sie diese Schritte, um die Gruppe für Administratoren anzulegen und mit den notwendigen Rechten auszustatten:
 1. Navigieren Sie in der oberen Leiste der IBM Cloud Konsole zum Menüpunkt `Manage`
-
 2. Wählen Sie im Dropdown-Menü den Eintrag `Access (IAM)` aus
-
 3. Orientieren Sie sich in der linken Seitenleiste am Bereich `Manage Access`
-
 4. Klicken Sie dort auf den Unterpunkt `Access groups`
-
 5. Starten Sie die Erstellung einer neuen Gruppe durch Klick auf den blauen Button `Create +`
-
 6. Geben Sie der Gruppe einen eindeutigen Namen (z. B. Platform-Admins) und eine kurze Beschreibung. Bestätigen Sie anschließend mit `Create`
-
 7. Sie befinden sich nun in der Übersicht der neuen Gruppe. Klicken Sie oben in der Reiter-Leiste auf `Access`
-
 8. Klicken Sie auf den blauen Button `Assign access +`, um den Prozess der Rechtevergabe zu starten.
-
 9. Wählen Sie im ersten Schritt unter "Service" die Option `All Account Management Services` aus (dies steuert Zugriff auf Billing, User-Invites etc.)
-
 10. Scrollen Sie zu "Roles and actions" und setzen Sie das Häkchen bei der `Rolle Administrator`
-
 11. Klicken Sie unten auf den Button `Add`, um diese Regel vorzumerken
-
 12. Legen Sie nun direkt die zweite Policy an: Wählen Sie diesmal als Service die Option `All Identity and Access enabled services` (dies ermöglicht Zugriff auf alle Ressourcen-Instanzen)
-
 13. Wählen Sie unter "Roles and actions" auch hier erneut die Rolle `Administrator` aus
-
 14. Fügen Sie diese zweite Regel ebenfalls mit einem Klick auf `Add` hinzu
-
 15. Auf der rechten Seite sehen Sie nun im Bereich Summary eine Zusammenfassung der vorgemerkten Richtlinien. Überprüfen Sie die Auswahl und schließen Sie den Vorgang mit einem Klick auf `Assign` endgültig ab
 
 
@@ -1201,19 +1170,12 @@ Um neuen Mitarbeitern oder Usern Zugriff auf Ihr IBM Cloud Konto zu gewähren, m
 Befolgen Sie dazu folgende Schritte:
 
 1. Navigieren Sie in der oberen Leiste zu ``Manage``
-
 2. Klicken Sie auf ``Access (IAM)``
-
 3. Wählen Sie in der linken Leiste  `Manage identities` 
-
 4. Wählen Sie den Punkt `Users` aus
-
 5. Klicken Sie nun auf den blauen Button `Invite users +`
-
 6. Wählen Sie zwischen `Access groups` und `Access policy`
-
 8. Wählen Sie Ihre Platform Admin `Access group` aus
-
 9. Klicken Sie zuletzt auf `Invite` um die User einzuladen
 
 
@@ -1230,34 +1192,29 @@ Ein häufiges Missverständnis in IAM ist der Unterschied zwischen der Verwaltun
 
 Am Beispiel von Cloud Object Storage (COS) lässt sich dies am besten erklären:
 
-**1. Platform Access (Verwaltung der "Hülle"):**
-
+### 1. Platform Access (Verwaltung der "Hülle"):
 Der Platform Access bezieht sich auf Aktionen, die auf der Ebene der IBM Cloud Konsole stattfinden. Es geht darum, den Lebenszyklus des Services zu steuern, nicht dessen Inhalt.
 
-**Fokus:** 
-
+### Fokus:
 Management der Service-Instanz
 
 **Typische Rollen:** Viewer, Editor, Administrator
 
-**Beispiel COS:**
-
+### Beispiel COS:
 - Ein Benutzer mit der Rolle Editor kann eine neue COS-Service-Instanz erstellen oder den Namen der Instanz ändern
 
 - Er kann die Instanz einer Ressourcengruppe zuordnen
 
 - **Aber:** Er kann (ohne Service Access) nicht sehen, welche Dateien in den Buckets liegen oder Dateien hochladen
 
-**2. Service Access (Nutzung des "Inhalts")**
-
+### 2. Service Access (Nutzung des "Inhalts")
 Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfinden, meistens über API-Aufrufe oder direkte Datenoperationen. Es geht um den Zugriff auf die eigentlichen Daten.
 
 **Fokus:** Nutzung der API und Datenmanipulation
 
 **Typische Rollen:** Reader, Writer, Manager
 
-**Beispiel COS:**
-
+### Beispiel COS:
 - Ein Benutzer mit der Rolle Writer kann Dateien (Objekte) in einen Bucket hochladen oder löschen
 
 - Ein Benutzer mit der Rolle Reader kann Dateien herunterladen
@@ -1277,12 +1234,10 @@ Der Service Access bezieht sich auf Aktionen, die innerhalb des Services stattfi
 
 Wenn die Standardrollen (wie Viewer, Editor, Admin) zu ungenau sind oder zu viele Rechte gewähren, kommen Custom Roles zum Einsatz. Sie ermöglichen eine maßgeschneiderte Zugriffssteuerung nach dem Least-Privilege-Prinzip (Nutzer erhalten nur die minimal nötigen Rechte).
 
-**Wie es funktioniert:** 
-
+### Wie es funktioniert:
 Anstatt ein fertiges Rollen-Paket zu übernehmen, wählen Sie aus einer Liste spezifische Service-Aktionen aus und bündeln diese zu einer neuen Rolle.
 
-**Beispiel:** 
-
+### Beispiel:
 Sie möchten, dass ein Operator virtuelle Server neu starten und stoppen darf, aber er soll keine Berechtigung haben, Server zu löschen oder neue zu erstellen.
 
 **Standardrolle Editor:** Wäre zu mächtig (darf auch löschen).
@@ -1290,14 +1245,10 @@ Sie möchten, dass ein Operator virtuelle Server neu starten und stoppen darf, a
 **Custom Role:** Sie erstellen eine Rolle namens "VM-Operator" und fügen nur die Aktionen instance.start und instance.stop hinzu.
 
 
-**Um eine benutzerdefinierte Rolle (Custom Role) zu erstellen, navigieren Sie wie folgt:**
-
+### Um eine benutzerdefinierte Rolle (Custom Role) zu erstellen, navigieren Sie wie folgt:
 1. Gehen Sie in der oberen Leiste auf `Manage`
-
 2. Wählen Sie den Eintrag `Access (IAM)`
-
 3. Klicken Sie in der linken Seitenleiste auf `Roles`
-
 4. Starten Sie den Prozess mit einem Klick auf `Create +`
 
 Im anschließenden Menü definieren Sie die Eigenschaften der Rolle. Vergeben Sie zunächst einen aussagekräftigen Namen und eine Beschreibung. Wählen Sie danach den Ziel-Service aus und fügen Sie die gewünschten Berechtigungen (Actions) granular hinzu. Sobald Sie alle Aktionen ausgewählt haben, bestätigen Sie die Erstellung abschließend über den Button Create.
@@ -1316,14 +1267,11 @@ Context Based Restrictions (CBR) erweitern das klassische IAM um eine weitere en
 
 Während IAM ausschließlich regelt, **wer (Identität)** auf eine Ressource zugreifen darf, definiert CBR zusätzlich, **von wo (Netzwerk-Kontext)** dieser Zugriff erfolgen muss. Es fungiert somit als eine netzwerkbasierte Sicherheitsschicht, die nach der erfolgreichen Authentifizierung geprüft wird.
 
-**Das Konzept basiert auf zwei Hauptkomponenten:**
-
-**1. Rules (Regeln)**
-
+### Das Konzept basiert auf zwei Hauptkomponenten:
+### 1. Rules (Regeln)
 Hier verknüpfen Sie eine Zone mit einem Cloud Service. Eine Regel besagt beispielsweise: "Der Zugriff auf den Cloud Object Storage Bucket X ist nur erlaubt, wenn die Anfrage aus der Zone 'Firmen-VPN' kommt."
 
-**Warum ist das wichtig?**
-
+### Warum ist das wichtig?
 Durch diese zusätzliche Dimension schützt CBR effektiv vor Credential Theft. Selbst wenn ein Angreifer einen gültigen API-Key stiehlt (das "Wer" ist korrekt), wird der Zugriff verweigert, da er nicht aus dem sicheren Firmennetzwerk kommt (das "Wo" ist falsch).
 
 
@@ -1338,20 +1286,16 @@ Andere IBM Cloud VPCs
 
 Service References (um Cloud-Services untereinander zu autorisieren)
 
-**Um Context-Based Restrictions einzurichten, navigieren Sie wie folgt:**
-
+### Um Context-Based Restrictions einzurichten, navigieren Sie wie folgt:
 1. Gehen Sie in der oberen Leiste auf `Manage`
-
 2. Wählen Sie den Eintrag `Context-based restrictions`
-
 3. Wählen Sie anschließend den gewünschten Bereich: `Rules` oder `Network zones`
 
  <img src="{{ site.baseurl }}/screenshots/cbr1.png" alt="platform/cbr1" width="1500">
 
  &nbsp;
 
-**Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?**
-
+### Network-Based vs. Identity-Based Protection - wann macht CBR Sinn?
 
  <img src="{{ site.baseurl }}/screenshots/cbr2.png" alt="platform/cbr2" width="1500">
 
@@ -1359,16 +1303,14 @@ Service References (um Cloud-Services untereinander zu autorisieren)
 
 Eine sichere Cloud-Architektur nutzt das Prinzip "Defense in Depth" und kombiniert zwei grundlegende Schutzebenen:
 
-**1. Network-Based Protection (Die Infrastruktur-Ebene)**
-
+### 1. Network-Based Protection (Die Infrastruktur-Ebene)
 Hier wird der Datenverkehr auf Basis von **IP-Adressen, Ports und Protokollen** gesteuert. Es geht darum, ob ein Datenpaket physisch ankommen darf.
 
 `Security Groups`: Eine **Stateful Firewall**, die direkt an der virtuellen Server-Instanz (VSI) sitzt. Sie regelt exakt, welcher Traffic den Server erreichen oder verlassen darf.
 
 `Access Control Lists (ACLs)`: Ein **Stateless Filter** auf Subnetz-Ebene. Sie fungieren als erste Barriere und steuern, was überhaupt in das Subnetz hinein- oder herausfließen darf.
 
-**2. Identity-Based Protection (Die Logik-Ebene)**
-
+### 2. Identity-Based Protection (Die Logik-Ebene)
 Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es geht darum, ob ein Benutzer oder Dienst eine Aktion (API-Call) ausführen darf, selbst wenn er netzwerktechnisch Zugriff hätte.
 
 `IAM`: Regelt das **"Wer" und "Was"**. Es authentifiziert den User und prüft, ob er die notwendigen Rechte (Rollen) hat.
@@ -1377,8 +1319,7 @@ Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es g
 
  &nbsp;
 
-**Zusammenfassung:**
-
+### Zusammenfassung:
 - **Network Protection** verhindert, dass unerwünschte Datenpakete Ihre Server erreichen (z. B. Hacker-Portscans). 
 
 - **Identity Protection** verhindert, dass authentifizierte Nutzer unerlaubte Aktionen durchführen oder gestohlene Zugangsdaten von unsicheren Orten genutzt werden.
@@ -1390,8 +1331,7 @@ Hier wird der Zugriff auf Basis von **Identitäten und Kontext** gesteuert. Es g
 ## 4.1 Navigieren im Katalog
 Der Katalog ist der zentrale Marktplatz und Einstiegspunkt für alle Dienste und Softwarelösungen in der IBM Cloud. Er dient dazu, Ressourcen zu entdecken, auszuwählen und bereitzustellen (Provisioning).
 
-**Der Inhalt unterteilt sich in vier Hauptbereiche:**
-
+### Der Inhalt unterteilt sich in vier Hauptbereiche:
 **Services:** Von IBM verwaltete Dienste (Managed Services) wie Datenbanken, Storage oder Compute-Ressourcen
 
 **Software:** Installierbare Komponenten wie Container-Images, Helm-Charts oder Operatoren (z. B. für OpenShift), sowohl von IBM als auch von zertifizierten Drittanbietern
@@ -1401,15 +1341,13 @@ Der Katalog ist der zentrale Marktplatz und Einstiegspunkt für alle Dienste und
 **Professional Services:** Beratungs- und Implementierungsdienstleistungen. Hier finden Sie Expertenunterstützung von IBM oder Partnern für spezifische Vorhaben wie Migrationen, Architektur-Design oder Modernisierungsprojekte
 
 
-**Zusätzlich:**
-
+### Zusätzlich:
 **Private Catalog:** Unternehmen können private Kataloge erstellen. Diese dienen dazu, eigene Softwarelösungen oder genehmigte Versionen von Public-Services intern für Teams bereitzustellen und deren Zugriff zentral zu steuern
 
 
 Um zum Katalog zu gelangen, gehen Sie wie folgt vor:
 
 1. Klicken Sie in der oberen Leiste auf Catalog
-
 2. Durchsuchen Sie das Angebot von über 300 Produkten über die Suchleiste oder nutzen Sie die verschiedenen Filtermöglichkeiten
 
 <img src="{{ site.baseurl }}/screenshots/catalog1.png" alt="catalog1" width="1500">
@@ -1446,7 +1384,6 @@ Sobald Sie den gewünschten Service im Katalog gefunden haben, führen Sie die f
 Um einen Überblick über provisionierte Ressourcen/Services zu erhalten, navigieren Sie wie folgt:
 
 1. Klicken Sie oben links auf das `Hamburger-Menü (Navigationsmenü)`
-
 2. Wählen Sie den Punkt `Resource list` aus
 
 In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressourcen effizient zu organisieren:
@@ -1469,35 +1406,27 @@ In der nun angezeigten Übersicht haben Sie diverse Möglichkeiten, Ihre Ressour
 
 Der zentrale Einstiegspunkt in das Kostenmanagement ist die Overview-Seite. Sie bietet eine hochgerechnete Zusammenfassung des aktuellen finanziellen Status Ihres Accounts, ohne sofort in komplexe Datentabellen einzutauchen.
 
-**Wichtige Kennzahlen auf einen Blick, hier erhalten Sie sofortige Auskunft über:**
-
-**Usage summary:** 
-
+### Wichtige Kennzahlen auf einen Blick, hier erhalten Sie sofortige Auskunft über:
+### Usage summary:
 Zeigt die Kosten der vergangenen Monate, die geschätzten Gesamtkosten für den laufenden Monat bis zum jetzigen Zeitpunkt und eine Kostenvorhersage für den kommenden Monat
 
-**Recent Invoices:** 
-
+### Recent Invoices:
 Eine Auflistung der Rechnungen der letzten Monate inklusive Betrag und Zahlungsstatus
 
-**Billing Period:** 
-
+### Billing Period:
 Gibt das Start- und Enddatum des aktuellen Abrechnungszyklus an.
 
-**Commitments & Subscriptions:** 
-
+### Commitments & Subscriptions:
 Eine Übersicht über vertragliche Mindestabnahmen, Abonnements oder verfügbares Guthaben
 
-**Spending notifications:** 
-
+### Spending notifications:
 Zeigt den Status Ihrer konfigurierten Warnmeldungen an (z. B. ob Budgetgrenzen fast erreicht sind).
 
 
 Navigation zu Billing and Usage:
 
 1. Klicken Sie in der oberen Leiste auf `Manage`
-
 2. Wählen Sie `Billing and usage`
-
 3. Sie landen standardmäßig direkt auf dem Reiter `Overview`
 
 <img src="{{ site.baseurl }}/screenshots/billingandusage1.png" alt="billingandusage1" width="1500">
@@ -1514,30 +1443,25 @@ Der Bereich Usage ist Ihr primäres Werkzeug, um die monatliche Rechnung zu vali
 
 
 
-**Der Analyse-Workflow (Drill-down):**
-
+### Der Analyse-Workflow (Drill-down):
 Gehen Sie wie folgt vor, um die Kostenentstehung im Detail zu prüfen:
 
-**Zeitraum und Gruppierung wählen:** 
-
+### Zeitraum und Gruppierung wählen:
 Wählen Sie oben rechts den gewünschten Monat. Ändern Sie anschließend die Ansicht bei "Group by" auf die gewünschte Resource Group
 
-**Ergebnis:** 
-
+### Ergebnis:
 Sie sehen sofort, welche Kosten die gewählte Ressourcengruppe in diesem Monat verursacht hat
 
 <img src="{{ site.baseurl }}/screenshots/billingandusage3.png" alt="billingandusage3" width="1500">
 
 
 
-**Usage nach Service, Plan und Region prüfen:** 
-
+### Usage nach Service, Plan und Region prüfen:
 Klicken Sie auf `View plans`, um die Usage eines Services einzusehen 
 
 (Sie können auch direkt in der `Usage` Startansicht einen Service wählen und auf `View plans` gehen)
 
-**Ergebnis:** 
-
+### Ergebnis:
 Sie sehen auf einen Blick den genutzten Plan (z. B. Standard oder Enterprise) und die Region (z. B. Frankfurt), in der die Kosten angefallen sind. Sie können auch hier den Filter wieder auf einen bestimmten Monat und Resourcengruppe legen
 
 <img src="{{ site.baseurl }}/screenshots/billingandusage4.png" alt="billingandusage4" width="1500">
@@ -1546,12 +1470,10 @@ Sie sehen auf einen Blick den genutzten Plan (z. B. Standard oder Enterprise) un
 
 
 
-**Verbrauchseinheiten analysieren:** 
-
+### Verbrauchseinheiten analysieren:
 Klicken Sie bei einem Service auf `View details`
 
-**Ergebnis:** 
-
+### Ergebnis:
 Hier sehen Sie die gesamte Aufschlüsselung der Abrechnungsmetriken für diesen Service. Sie erkennen genau, was berechnet wurde, z. B.:
 
 GIGABYTE_HOURS (Wie viel Speicher wurde wie lange belegt?)
@@ -1567,16 +1489,13 @@ IP_HOURS (Kosten für reservierte IPs).
 
 
 
-**Tiefenanalyse auf Instanz-Ebene:** 
-
+### Tiefenanalyse auf Instanz-Ebene:
 Um genau zu wissen, welche konkrete Instanz(Resourcengruppe) für welche Kosten verantwortlich ist und wie genau die Kosten aufgeschlüsstelt werden, klicken Sie auf `View instance details`
 
-**Ergebnis:** 
-
+### Ergebnis:
 Sie bohren noch eine Ebene tiefer. Jetzt sehen Sie jede einzelne Instanz(Resourcengruppe) und deren individuellen Beitrag zu den Gesamtkosten.
 
-**Zusammenfassung:**
-
+### Zusammenfassung:
 Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengruppe über den Service-Plan hin zu den technischen Metriken und schließlich zur einzelnen Instanz.
 
 <img src="{{ site.baseurl }}/screenshots/billingandusage8.png" alt="billingandusage8" width="1500">
@@ -1591,12 +1510,10 @@ Im Bereich Usage bewegen Sie sich vom "Großen ins Kleine": Von der Ressourcengr
 
 Die Cost Analysis dient dazu, Ihre Ausgaben strategisch zu untersuchen. Sie bietet Ihnen leistungsstarke Werkzeuge, um nicht nur Gesamtsummen zu sehen, sondern die Kostentreiber durch präzise Filterung zu isolieren und visuell aufzubereiten.
 
-**Navigation:** 
-
+### Navigation:
 Wählen Sie im linken Menü unter Billing and usage den Punkt Cost analysis
 
-**Funktionen und Filter:**
-
+### Funktionen und Filter:
 Um die Kostenanalyse genau auf Ihre Fragestellung zuzuschneiden, bietet die Seitenleiste eine Vielzahl an Filtern. Sie können die Anzeige unter anderem nach folgenden Kategorien einschränken:
 
 - `Region`
@@ -1615,19 +1532,16 @@ Um die Kostenanalyse genau auf Ihre Fragestellung zuzuschneiden, bietet die Seit
 
 ...und weiteren spezifischen Kriterien
 
-**Time frame:**
-
+### Time frame:
 Über das Dropdown-Menü Time frame bestimmen Sie den Betrachtungszeitraum (z. B. 3 months, 6 months), um Entwicklungen über einen längeren Zeitraum zu vergleichen
 
-**Group by:** 
-
+### Group by:
 Ganz oben können Sie über Group by festlegen, wie die Daten im Diagramm zusammengefasst werden sollen (z. B. Kosten gruppiert nach Ressourcengruppe oder Service), um Trends sofort visuell zu erfassen.
 
 <img src="{{ site.baseurl }}/screenshots/costanalysis.png" alt="costanalysis" width="1500">
 
 
-**Unterschied zu Usage:** 
-
+### Unterschied zu Usage:
 Der entscheidende Unterschied liegt im Zeitbezug und der Visualisierung. 
 
 Während der Bereich Usage Ihnen eine statische, tabellarische Abrechnung für einen einzelnen Monat liefert (Fokus: Rechnungsprüfung), visualisiert die Cost Analysis die Entwicklung über mehrere Monate hinweg (Fokus: Trenderkennung). Sie nutzen **Usage**, um exakt zu sehen, **"was" berechnet wurde**, und **Cost Analysis**, um zu verstehen, **"wie" sich die Kosten entwickeln**.
@@ -1638,30 +1552,24 @@ Während der Bereich Usage Ihnen eine statische, tabellarische Abrechnung für e
 
 Damit Sie nicht täglich aktiv das Dashboard überprüfen müssen, bietet IBM Cloud Spending Notifications. Dies sind automatische Warnmeldungen, die Sie per E-Mail informieren, sobald Ihre Ausgaben einen definierten Schwellenwert erreichen.
 
-**So erstellen Sie eine Benachrichtigung:**
-
+### So erstellen Sie eine Benachrichtigung:
 1. Navigieren Sie zu `Manage `> `Billing and usage` 
-
 2. Wählen Sie im linken Menü den Punkt `Spending notifications`
-
 3. Klicken Sie auf den Button `Create`
 
 <img src="{{ site.baseurl }}/screenshots/spending_notifications1.png" alt="spending_notifications1" width="1500">
 
 
 
-**Konfiguration der Warnung:**
-
-**Service:** 
-
+### Konfiguration der Warnung:
+### Service:
 Entscheiden Sie, für welchen Service die Benarichtigung gelten soll
 
 
 **Recipients**: Geben Sie die E-Mail-Adressen der Personen an, die benachrichtigt werden sollen (z. B. der Account Owner oder der Projektleiter).
 
 
-**Threshold:**
-
+### Threshold:
 Legen Sie einen Geldbetrag fest (z. B. 500 USD). Sie können dann einstellen, bei wie viel Prozent dieses Betrags gewarnt werden soll (z. B. Benachrichtigung bei 80%, 90% und 100% des Budgets).
 
 
@@ -1680,8 +1588,7 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 <img src="{{ site.baseurl }}/screenshots/EnterpriseAccountArch.png" alt="EnterpriseBasics1" width="1200">
 
 
-**Die Vorteile und Funktionen gliedern sich in drei Hauptbereiche:**
-
+### Die Vorteile und Funktionen gliedern sich in drei Hauptbereiche:
 - **Zentralisierte Abrechnung & Kostenmanagement**
 
     Der Enterprise Account fungiert als zentrale Zahlstelle für alle untergeordneten Accounts.
@@ -1760,12 +1667,10 @@ Ein Enterprise Account ist eine **administrative Hierarchie**, die es großen Or
 ## 7.1 Support Center
 Das Support Center ist Ihre zentrale Anlaufstelle für alle technischen Anfragen, Problemmeldungen und Hilfestellungen rund um die IBM Cloud Platform und ihre Services.
 
-**Navigation:** 
-
+### Navigation:
 Klicken Sie in der oberen Navigationsleiste auf `Help` und dann den Menüpunkt `Support center`
 
-**Die wichtigsten Funktionen:**
-
+### Die wichtigsten Funktionen:
 - **Case Management (Tickets):** 
 
     Hier können Sie neue Support-Fälle ("Cases") erstellen, wenn Sie auf technische Probleme stoßen. Die Bearbeitungszeit hängt dabei von dem Scheweregrad und Ihrem Support Plan ab 
@@ -1785,26 +1690,20 @@ In einer dynamischen Cloud-Umgebung ist das regelmäßige Prüfen der Benachrich
 
 Das Ignorieren dieser Meldungen kann gravierende Folgen für die Stabilität Ihrer Anwendungen haben. 
 
-**IBM Cloud nutzt diesen Kanal für kritische Informationen:**
-
-**Deprecations (Abkündigungen):**
-
+### IBM Cloud nutzt diesen Kanal für kritische Informationen:
+### Deprecations (Abkündigungen):
 Cloud-Services und Runtimes entwickeln sich ständig weiter. Wenn eine bestimmte Datenbank-Version oder Software-Komponente ihr "End of Life" erreicht, werden Sie hier im Voraus gewarnt. Übersehen Sie diese Warnung, kann es passieren, dass Ihre Anwendung von einem Tag auf den anderen nicht mehr funktioniert oder nicht mehr bereitgestellt werden kann.
 
-**Geplante Wartungsarbeiten:**
-
+### Geplante Wartungsarbeiten:
 Sie erhalten Informationen über anstehende Updates an der physischen Infrastruktur oder den Services. Dies gibt Ihnen die Zeit, Hochverfügbarkeits-Mechanismen zu prüfen oder Wartungsfenster einzuplanen.
 
-**Required Actions (Handlungsbedarf):** 
-
+### Required Actions (Handlungsbedarf):
 Oft erfordern Sicherheitsupdates eine aktive Handlung Ihrerseits (z. B. "Starten Sie den Cluster neu, um den Sicherheitspatch anzuwenden").
 
-**Empfehlung:**
-
+### Empfehlung:
 Prüfen Sie das Notification Center regelmäßig auf Meldungen der Kategorien High oder Critical, um ungeplante Ausfälle ("Silent Failures") zu vermeiden.
 
-**Zusätzlich:**
-
+### Zusätzlich:
 - **Cloud Status**: 
     
     Über das Support Center > `View cloud status` erreichen Sie das zentrale Dashboard zur Überwachung der gesamten IBM Cloud Plattform. 
@@ -1819,29 +1718,22 @@ Prüfen Sie das Notification Center regelmäßig auf Meldungen der Kategorien Hi
 ## 7.3 Kostenschätzungen
 Der Cost Estimator ist ein integriertes Planungswerkzeug, mit dem Sie die monatlichen Kosten für Ihre geplante Infrastruktur prognostizieren können, bevor Sie Ressourcen bereitstellen. Er eignet sich ideal, um Budgets zu planen oder Genehmigungen einzuholen.
 
-**So nutzen Sie das Tool:**
-
-**Im Katalog:**
-
+### So nutzen Sie das Tool:
+### Im Katalog:
 Wenn Sie einen Service konfigurieren, sehen Sie in der rechten Seitenleiste die aktuelle Preisschätzung. Anstatt direkt auf Create zu klicken, wählen Sie den Button `Add to estimate`. Dies fügt die Konfiguration Ihrem vorläufigen Warenkorb hinzu.
 
-**Schätzung überprüfen:** 
-
+### Schätzung überprüfen:
 Klicken Sie in der oberen Kopfzeile der Konsole auf das Taschenrechner-Symbol (Cost estimator). Hier sehen Sie die gesammelte Liste aller hinzugefügten Services.
 
 
-**Funktionen in der Übersicht:**
-
-**Anpassung:** 
-
+### Funktionen in der Übersicht:
+### Anpassung:
 Sie können Mengen (z. B. Anzahl der Server oder GB Speicher) nachträglich ändern, um verschiedene Szenarien durchzuspielen.
 
-**Währung:**
-
+### Währung:
 Stellen Sie die Anzeige auf Ihre lokale Währung um.
 
-**Export:** 
-
+### Export:
 Über den Button Download CSV/XLSX oder Print/PDF können Sie einen offiziellen Kostenvoranschlag generieren, um diesen beispielsweise an die Finanzabteilung zur Freigabe weiterzuleiten.
 
 <img src="{{ site.baseurl }}/screenshots/CostEstimator.png" alt="CostEstimator" width="1500">
@@ -1853,31 +1745,24 @@ Stellen Sie die Anzeige auf Ihre lokale Währung um.
 
 Die [offizielle Dokumentation](https://cloud.ibm.com/docs) ist Ihre wichtigste Wissensquelle. Sie bietet technische Referenzen, die für den sicheren Betrieb unerlässlich sind.
 
-**Wie Sie zur Dokumentation gelangen:**
-
+### Wie Sie zur Dokumentation gelangen:
 Sie haben zwei Wege, um auf die Inhalte zuzugreifen:
 
-**Global:**
-
+### Global:
 Klicken Sie in der oberen Kopfzeile der Konsole auf den Eintrag `Docs` unter dem `? Symbol`. Dies führt Sie zur zentralen Startseite mit einer Suche über alle Dienste.
 
-**Kontextbezogen:**
-
+### Kontextbezogen:
  Wenn Sie sich gerade in der Konfiguration eines spezifischen Services (z. B. COS) befinden, klicken Sie im linken oder oberen Menü auf den Reiter `Docs`. Dies bringt Sie direkt zu den spezifischen Anleitungen für genau diesen Dienst.
 
 
-**Warum Sie die Docs nutzen sollten:**
-
-**Schritt-für-Schritt-Tutorials:** 
-
+### Warum Sie die Docs nutzen sollten:
+### Schritt-für-Schritt-Tutorials:
 Anstatt durch "Trial and Error" Zeit zu verlieren, finden Sie hier geprüfte Anleitungen ("Getting Started"), um Ressourcen korrekt und nach Best Practices aufzusetzen.
 
-**API & CLI Referenzen:**
-
+### API & CLI Referenzen:
 Für Entwickler und Automatisierung sind hier alle Befehle, Endpunkte und SDKs dokumentiert, die Sie benötigen, um die Cloud programmatisch zu steuern.
 
-**Troubleshooting:** 
-
+### Troubleshooting:
 Bevor Sie ein Support-Ticket eröffnen, finden Sie im Bereich "Troubleshooting" oft schnelle Lösungen für gängige Fehlermeldungen und Konfigurationsprobleme.
 
 <img src="{{ site.baseurl }}/screenshots/Docs.png" alt="Docs1" width="1500">
